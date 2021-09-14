@@ -69,3 +69,11 @@ $text-color-4: #17b586;
 $text-color-5: #3a86df;  
 $text-color-6: #f77c2d;  
 $text-color-7: #e65100;
+
+## deploy
+
+-  github page : https://wanyutang.github.io/demo-hk-push-admin/
+
+``` shell
+npm run deploy
+```
