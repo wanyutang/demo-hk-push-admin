@@ -1,0 +1,1888 @@
+@import '~bootstrap';
+@import '~selectric/src/selectric';
+@import '~bootstrap-datepicker/dist/css/bootstrap-datepicker3.standalone.css';
+@import 'variable';
+@import 'mixin';
+@import 'function';
+
+body,
+html {
+  background-color: $primary-color-5;
+  color: $text-color-1;
+  height: 100%;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+@include block(login-container) {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
+  width: 100%;
+
+  @include element(background) {
+    background-image: url('../images/bg.png');
+    background-position: left center;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    position: relative;
+    width: 65%;
+
+    &::before {
+      background-color: transparent;
+      background-image: url('../images/bg-decoration.png');
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: 343px 100%;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 343px;
+    }
+  }
+}
+
+@include block(login-form) {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 0 60px;
+  padding-bottom: 24px;
+  padding-top: 20px;
+  position: absolute;
+  right: 5%;
+  top: 0;
+  width: 440px;
+
+  @include element(header) {
+    padding-bottom: 33px;
+    text-align: center;
+
+    &::before {
+      background-image: url('../images/logo.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 192px 31px;
+      content: '';
+      display: inline-block;
+      height: 31px;
+      margin-bottom: 17px;
+      width: 192px;
+    }
+  }
+
+  @include element(title) {
+    align-items: center;
+    color: $text-color-1;
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+    justify-content: center;
+
+    > span {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  @include element(label) {
+    color: $text-color-2;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  @include element(action-container) {
+    display: flex;
+    padding-bottom: 20px;
+    padding-top: 8px;
+
+    button {
+      margin-right: 20px;
+      width: 100%;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @include element(remarks-container) {
+    color: $text-color-2;
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+  }
+
+  @include element(remarks-link) {
+    color: $primary-color-1;
+
+    &:hover,
+    &:active {
+      color: $primary-color-1;
+      text-decoration: none;
+    }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+}
+
+@include block(decorate-line) {
+  background-color: $text-color-1;
+  height: 1px;
+  width: 35px;
+}
+
+@include block(tpi-button) {
+  border: 0;
+  border-radius: 30px;
+  outline: none;
+  padding: 14px 24px;
+  text-align: center;
+  transition: all 0.3s linear, color 0.3s linear;
+  white-space: nowrap;
+
+  @include modifier(primary) {
+    background: $primary-color-1;
+    border: 0;
+    color: $secondary-color-4;
+    &:active,
+    &:hover {
+      color: $secondary-color-4;
+      text-decoration:none;
+    }
+  }
+
+  @include modifier(secondary) {
+    background: $secondary-color-4;
+    border: solid 1px $primary-color-1;
+    color: $primary-color-1;
+
+    &:active,
+    &:hover {
+      color: $secondary-color-4;
+    }
+  }
+
+  @include modifier(short) {
+    width: 120px;
+  }
+
+  @include modifier(upload) {
+    background: $secondary-color-4;
+    border: solid 1px $primary-color-1;
+    color: $primary-color-1;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+
+    &:active,
+    &:hover {
+      color: $secondary-color-4;
+    }
+  }
+
+  @include modifier(temptext) {
+    background: $secondary-color-4;
+    border: solid 1px $primary-color-1;
+    color: $primary-color-1;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+
+    &:active,
+    &:hover {
+      color: $secondary-color-4;
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:active,
+  &:hover {
+    background: $primary-color-3;
+    border-style: solid;
+  }
+
+  &:disabled {
+    background: $secondary-color-2;
+    color: $secondary-color-4;
+  }
+}
+
+@include block(tpi-button) {
+  @include modifier(small) {
+    background: $secondary-color-4;
+    color: $primary-color-1;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+
+    &:active,
+    &:hover {
+      background: #ecedf3;
+    }
+  }
+
+  @include modifier(stop) {
+    background: $secondary-color-4;
+    border: solid 1px $text-color-6;
+    color: $text-color-6;
+
+    &:active,
+    &:hover {
+      background: $text-color-7;
+      border-style: solid;
+      color: $secondary-color-4;
+    }
+  }
+  @include modifier(delete) {
+    background: $secondary-color-4;
+    border: solid 1px $text-color-4;
+    color: $text-color-4;
+
+    &:active,
+    &:hover {
+      background: $text-color-4;
+      border-style: solid;
+      color: $secondary-color-4;
+    }
+  }
+
+  @include modifier(recycle) {
+    background: $secondary-color-4;
+    border: solid 1px $secondary-color-3;
+    color: $secondary-color-3;
+
+    &:active,
+    &:hover {
+      background: $secondary-color-3;
+      border-style: solid;
+      color: $secondary-color-4;
+    }
+  }
+
+  @include modifier(modify) {
+    background: $secondary-color-4;
+    border: solid 1px $text-color-5;
+    color: $text-color-5;
+
+    &:active,
+    &:hover {
+      background: $text-color-5;
+      border-style: solid;
+      color: $secondary-color-4;
+    }
+  }
+
+  @include modifier(download) {
+    background: $secondary-color-4;
+    border: solid 1px $text-color-4;
+    color: $text-color-4;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+
+    &:active,
+    &:hover {
+      background: $text-color-4;
+      border-style: solid;
+      color: $secondary-color-4;
+    }
+  }
+}
+
+
+%tpi-other-input-base {
+  background: $secondary-color-4;
+  background-clip: padding-box;
+  border: solid 1px $secondary-color-2;
+  border-radius: 20px;
+  color: $text-color-3;
+  display: block;
+  font-size: 14px;
+  outline: none;
+  padding: 9px 24px;
+  transition: border 0.3s linear;
+  width: 100%;
+}
+
+@include block(tpi-input) {
+  @include element(inner) {
+    position: relative;
+  }
+
+  @include element(inner-flex) {
+    position: relative;
+    display: flex;
+  }
+
+  @include element(input) {
+    background-clip: padding-box;
+    background-color: $secondary-color-1;
+    border: solid 1px $secondary-color-1;
+    border-radius: 25px;
+    color: $text-color-2;
+    display: block;
+    line-height: 1.5;
+    outline: none;
+    padding: 14px 24px;
+    transition: border 0.3s linear;
+    width: 100%;
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $text-color-2;
+      opacity: 1; /* Firefox */
+    }
+
+    &::-ms-input-placeholder { /* stylelint-disable-line selector-no-vendor-prefix */
+      /* Microsoft Edge */
+      color: $text-color-2;
+    }
+
+    &:-ms-input-placeholder { /* stylelint-disable-line selector-no-vendor-prefix */
+      /* Internet Explorer 10-11 */
+      color: $text-color-2;
+    }
+
+    &:focus {
+      background-color: $secondary-color-1;
+      border: solid 1px $primary-color-1;
+      box-shadow: none;
+      color: $text-color-2;
+    }
+  }
+
+  @include element(validate-msg) {
+    color: $text-color-7;
+    font-size: 15px;
+    font-weight: 500;
+    padding-left: 24px;
+    padding-top: 10px;
+  }
+
+  @include modifier(error) {
+    > div:first-child::after {
+      background: url('../images/icon-error.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 14px;
+      content: '';
+      height: 14px;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+    }
+
+    input {
+      border: solid 1px $text-color-7;
+
+      &:focus {
+        border: solid 1px $text-color-7;
+      }
+    }
+  }
+
+  @include element(other-input) {
+    @extend %tpi-other-input-base;
+
+    height: 40px;
+
+    &:focus {
+      background: $secondary-color-4;
+      border: solid 1px $secondary-color-2;
+      color: $text-color-3;
+    }
+  }
+
+  @include element(other-textarea) {
+    @extend %tpi-other-input-base;
+
+    &:focus {
+      background: $secondary-color-4;
+      border: solid 1px $secondary-color-2;
+      color: $text-color-3;
+    }
+  }
+
+  @include modifier(correct) {
+
+    @include block(tpi-input) {
+      @include element(input) {
+        border: solid 1px $primary-color-1;
+      }
+    }
+
+    > div:first-child::after {
+      background: url('../images/icon-correct.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 14px;
+      content: '';
+      height: 14px;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+    }
+  }
+
+  @include modifier(disabled) {
+    @include block(tpi-input) {
+      @include element(input) {
+        background-color: $secondary-color-2;
+        border: solid 1px $secondary-color-2;
+        color: $secondary-color-4;
+
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: $secondary-color-4;
+          opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder { /* stylelint-disable-line selector-no-vendor-prefix */
+          /* Microsoft Edge */
+          color: $secondary-color-4;
+        }
+
+        &:-ms-input-placeholder { /* stylelint-disable-line selector-no-vendor-prefix */
+          /* Internet Explorer 10-11 */
+          color: $secondary-color-4;
+        }
+
+        &:focus {
+          background-color: $secondary-color-2;
+          border: solid 1px $secondary-color-2;
+          color: $secondary-color-4;
+        }
+      }
+    }
+
+    @include block(tpi-input) {
+      @include element(other-input) {
+        background-color: #ecedf3;
+        border: solid 1px #ecedf3;
+        color: $text-color-3;
+
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: $text-color-3;
+          opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder { /* stylelint-disable-line selector-no-vendor-prefix */
+          /* Microsoft Edge */
+          color: $text-color-3;
+        }
+
+        &:-ms-input-placeholder { /* stylelint-disable-line selector-no-vendor-prefix */
+          /* Internet Explorer 10-11 */
+          color: $text-color-3;
+        }
+
+        &:focus {
+          background-color: #ecedf3;
+          border: solid 1px #ecedf3;
+          color: $text-color-3;
+        }
+      }
+    }
+  }
+
+  @include modifier(calendar) {
+    > div:first-child::after {
+      background: url('../images/icon-calendar.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 18px;
+      content: '';
+      height: 18px;
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+    }
+  }
+}
+
+@include block(system-info) {
+  bottom: 30px;
+  color: $text-color-2;
+  font-size: 14px;
+  font-weight: 500;
+  position: absolute;
+  right: 4%;
+  text-align: center;
+  width: 440px;
+
+  div:first-child {
+    margin-bottom: 12px;
+  }
+}
+
+@include block(tpi-selectric) {
+  .selectric {
+    background: $secondary-color-1;
+    border: solid 1px $secondary-color-1;
+    border-radius: 25px;
+    transition: border 0.3s linear;
+
+    .label {
+      color: $text-color-3;
+      font-size: 16px;
+      height: 48px;
+      line-height: 48px;
+      margin-left: 24px;
+      transition: color 0.3s linear;
+    }
+
+    .arrow {
+      display: block;
+      height: 100%;
+      margin-right: 18px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: transform 0.3s linear;
+      width: 16px;
+
+      &::after {
+        background: url('../images/icon-triangle.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 16px 10px;
+        content: '';
+        height: 100%;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 16px;
+      }
+    }
+  }
+
+  .selectric-items {
+    background-color: $secondary-color-1;
+    border: solid 1px $primary-color-1;
+    border-radius: 25px;
+    margin-top: 5px;
+    overflow: hidden;
+
+    li {
+      align-items: center;
+      background: $secondary-color-1;
+      color: $text-color-3;
+      display: flex;
+      font-size: 16px;
+      height: 50px;
+      padding: 0;
+      padding-left: 24px;
+
+      &:hover {
+        background: $primary-color-1;
+        color: $secondary-color-4;
+      }
+    }
+
+    .selected,
+    .highlighted {
+      background: $primary-color-1;
+      color: $secondary-color-4;
+    }
+  }
+
+  .selectric-open {
+    .selectric {
+      border: solid 1px $primary-color-1;
+
+      .label {
+        color: $primary-color-1;
+      }
+    }
+
+    .arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include block(tpi-selectric) {
+  @include modifier(other) {
+    .selectric {
+      background: $secondary-color-4;
+      border: solid 1px $secondary-color-2;
+      border-radius: 20px;
+      transition: border 0.3s linear;
+
+      .label {
+        color: $text-color-3;
+        font-size: 14px;
+        height: 38px;
+        line-height: 38px;
+        margin-left: 24px;
+      }
+
+      .arrow {
+        display: block;
+        height: 100%;
+        margin-right: 18px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: transform 0.3s linear;
+        width: 16px;
+
+        &::after {
+          background: url('../images/icon-triangle-light.png');
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: 13px 8px;
+          content: '';
+          height: 100%;
+          left: 0;
+          margin: auto;
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 16px;
+        }
+      }
+    }
+
+    .selectric-items {
+      background-color: $secondary-color-4;
+      border: solid 1px $secondary-color-2;
+      border-radius: 25px;
+      margin-top: 5px;
+      overflow: hidden;
+
+      li {
+        align-items: center;
+        background: $secondary-color-4;
+        color: $text-color-3;
+        display: flex;
+        font-size: 14px;
+        height: 50px;
+        padding-left: 24px;
+
+        &:hover {
+          background: $primary-color-1;
+          color: $secondary-color-4;
+        }
+      }
+
+      .selected,
+      .highlighted {
+        background: $primary-color-1;
+        color: $secondary-color-4;
+      }
+    }
+
+    .selectric-open {
+      .arrow {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+@include block(tpi-selectric) {
+  @include modifier(error) {
+    .selectric {
+      .label {
+        color: $text-color-7;
+      }
+    }
+  }
+}
+
+@include block(page-container) {
+  background-color: $primary-color-5;
+  display: flex;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+
+  @include element(menu) {
+    background: $primary-color-4;
+    display: flex;
+    flex: 0 120px;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
+    position: relative;
+    width: 120px;
+    z-index: z('menu', 'container');
+  }
+
+  @include element(main) {
+    flex: 100%;
+    overflow: auto;
+  }
+
+  @include element(version) {
+    color: $secondary-color-4;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+    width: 100%;
+  }
+
+  @include element(header) {
+    align-items: center;
+    background-image: url('../images/head-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 72px;
+    color: $secondary-color-4;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include element(title) {
+    text-align: left;
+  }
+
+  @include element(info) {
+    text-align: right;
+
+    > button {
+      margin-left: 15px;
+    }
+
+    > span {
+      font-size: 12px;
+      font-weight: 500;
+    }
+  }
+
+  @include element(content) {
+    background-color: $primary-color-5;
+    padding-bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 20px;
+
+    .page-title {
+      padding-bottom: 20px;
+      padding-left: 5px;
+    }
+
+    .page-button {
+      padding-top: 20px;
+      text-align: right;
+    }
+  }
+
+  &::before {
+    background: rgba(0, 0, 0, 0.4);
+    content: '';
+    display: block;
+    height: 100vh;
+    left: 0;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    width: 100%;
+    z-index: z('mask');
+  }
+
+  &--block {
+    &::before {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@include block(menu) {
+  background: $primary-color-4;
+  height: 100%;
+  width: 120px;
+  
+  @include element(logo) {
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+
+    &::before {
+      background: url('../images/tpi-logo-white.png');
+      background-repeat: no-repeat;
+      background-size: 36px;
+      content: '';
+      display: block;
+      height: 36px;
+      width: 36px;
+    }
+  }
+
+  @include element(item) {
+    align-items: center;
+    background: $primary-color-4;
+    color: $secondary-color-4;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 500;
+    height: 107px;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    z-index: z('menu', 'main-item');
+
+    @include modifier(active) {
+      background-color: rgba(255, 255, 255, 0.18);
+    }
+
+    &::before {
+      background: $secondary-color-4;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%);
+      transition: all 0.3s ease-in-out;
+      width: 4px;
+    }
+
+    &--active {
+      &::before {
+        transform: translateX(0);
+      }
+    }
+
+    > span {
+      color: $secondary-color-4;
+    }
+
+    > span:first-child {
+      margin-bottom: 5px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.18);
+      text-decoration: none;
+
+      &::before {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  @include element(group) {
+    position: relative;
+  }
+
+  @include element(sub-container) {
+    background: $primary-color-5;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    width: 200px;
+    z-index: z('menu', 'sub-container');
+
+    @include modifier(active) {
+      left: 100%;
+      transform: translateX(0);
+    }
+  }
+
+  @include element(sub-item) {
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-top: 8px;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::before {
+      background: $secondary-color-3;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s linear;
+      width: 8px;
+    }
+
+    a {
+      color: $text-color-1;
+    }
+
+    &--active,
+    &:hover {
+      background: $secondary-color-7;
+
+      &::before {
+        transform: translateX(0);
+      }
+
+      a {
+        color: $secondary-color-3;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include block(sub-menu) {
+  background: $primary-color-5;
+  height: 100%;
+  left: 120px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  width: 200px;
+  z-index: z('submenu');
+
+  @include modifier(active) {
+    transform: translateX(0);
+  }
+
+  @include element(inner) {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  @include element(category) {
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+
+    @include modifier(active) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @include element(item) {
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 8px;
+    padding-left: 23px;
+    padding-top: 8px;
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::before {
+      background: $secondary-color-3;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s linear;
+      width: 8px;
+    }
+
+    a {
+      color: $text-color-1;
+    }
+
+    &--active,
+    &:hover {
+      background: $secondary-color-7;
+
+      &::before {
+        transform: translateX(0);
+      }
+
+      a {
+        color: $secondary-color-3;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+%menu-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 36px 37px;
+  content: '';
+  display: inline-block;
+  height: 37px;
+  width: 36px;
+}
+
+@include block(menu-icon-home) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-home.png');
+}
+
+@include block(menu-icon-authority) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-authority.png');
+}
+
+@include block(menu-icon-management) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-management.png');
+}
+
+@include block(menu-icon-sell) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-sell.png');
+}
+
+@include block(menu-icon-number) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-number.png');
+}
+
+@include block(menu-icon-recording) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-recording.png');
+}
+
+@include block(menu-icon-report) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-report.png');
+}
+
+@include block(menu-icon-urgent) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-urgent.png');
+}
+
+@include block(menu-icon-platform) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-platform.png');
+}
+
+@include block(menu-icon-notification-items) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-notification-items.png');
+}
+
+@include block(menu-icon-group) {
+  @extend %menu-icon;
+
+  background-image: url('../images/menu-icon-group.png');
+}
+
+@include block(icon-add) {
+  background-image: url('../images/icon-add.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px;
+  content: '';
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+}
+
+@include block(icon-open) {
+  background-image: url('../images/icon-open.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+@include block(icon-info) {
+  background-image: url('../images/icon-info.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+}
+
+@include block(nav-bar) {
+  align-items: center;
+  background: $secondary-color-4;
+  display: flex;
+  justify-content: start;
+  padding: 0 55px;
+
+  @include element(item) {
+    align-items: center;
+    color: $text-color-1;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    height: 100%;
+    margin-right: 47px;
+    overflow: hidden;
+    padding-bottom: 16px;
+    padding-top: 16px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s linear;
+
+    &::after {
+      background: $primary-color-1;
+      border-radius: 3.5px;
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 3px;
+      left: 0;
+      position: absolute;
+      transform: translateX(-100%);
+      // transform: translateY(100%);
+      transition: all 0.3s ease-out;
+      width: 100%;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:active,
+    &--active {
+      color: $primary-color-1;
+      text-decoration: none;
+
+      &::after {
+        transform: translateX(0);
+        // transform: translateY(0);
+      }
+    }
+  }
+}
+
+@include block(page-title) {
+  color: $text-color-1;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+@include block(tpi-table) {
+  width: 100%;
+
+  @include modifier(with-margin) {
+    margin-top: 30px;
+  }
+
+  @include element(inner) {
+    border-radius: 8px;
+    box-shadow: 0 8px 15px 0 rgba(200, 200, 200, 0.5);
+    color: $text-color-1;
+    font-size: 14px;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  @include element(non-data) {
+      border-radius: 8px;
+      color: $text-color-1;
+      font-size: 14px;
+      max-width: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      width: 100%;
+    }
+
+  @include element(table) {
+    text-align: center;
+    width: 100%;
+
+    th,
+    td {
+      font-weight: normal;
+      padding: 18px 10px;
+      white-space: nowrap;
+    }
+
+    td span{
+      white-space:pre-wrap;
+    }
+
+    thead th {
+      background: $secondary-color-5;
+      // white-space: nowrap;
+    }
+
+    tr:nth-child(odd) td {
+      background: $secondary-color-4;
+    }
+
+    tr:nth-child(even) td {
+      background: $secondary-color-6;
+    }
+
+  }
+
+  @include element(report) {
+    width: 100%;
+
+    th,
+    td {
+      font-weight: normal;
+      padding: 18px 10px;
+      white-space: nowrap;
+    }
+
+    thead th {
+      background: $secondary-color-5;
+      // white-space: nowrap;
+    }
+
+    tr:nth-child(odd) td {
+      background: $secondary-color-4;
+    }
+
+    tr:nth-child(even) td {
+      background: $secondary-color-6;
+    }
+
+    tr.tdheader td{
+      background: $secondary-color-7;
+    }
+
+    .tpi-align {
+      text-align: center;
+    }
+  }
+
+  @include element(pagination) {
+    margin-top: 30px;
+  }
+
+  .tpi-button {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 4px 18px;
+  }
+
+  @include element(active){
+    td {
+      font-weight: bolder;
+    }
+  }
+}
+
+@include block(tpi-pagination) {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+
+  @include element(previous) {
+    background: url('../images/icon-previous.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px 20px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+  }
+
+  @include element(next) {
+    background: url('../images/icon-next.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12px 20px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+  }
+
+  @include element(page-button) {
+    align-items: center;
+    border: solid 1px $secondary-color-2;
+    border-radius: 18px;
+    color: $secondary-color-2;
+    cursor: pointer;
+    display: flex;
+    font-weight: 500;
+    height: 32px;
+    justify-content: center;
+    transition: all 0.3s linear;
+    width: 32px;
+
+    
+
+    @include modifier(active) {
+      background: $primary-color-1;
+      border: solid 1px $primary-color-1;
+      color: $secondary-color-4;
+    }
+
+    @include modifier(disabled) {
+      background: $secondary-color-2;
+      border: solid 1px $secondary-color-2;
+      color: $secondary-color-4;
+      cursor: default;
+      display: none;
+    }
+
+    &:hover,
+    &:active {
+      background: $primary-color-1;
+      border: solid 1px $primary-color-1;
+      color: $secondary-color-4;
+    }
+
+    &--disabled {
+      &:hover,
+      &:active {
+        background: $secondary-color-2;
+        border: solid 1px $secondary-color-2;
+        color: $secondary-color-4;
+      }
+    }
+
+    > a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+  }
+
+  > div {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  > li {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+}
+
+@include block(tpi-card) {
+  background-color: $secondary-color-4;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px 0 rgba(200, 200, 200, 0.5);
+
+  @include element(header) {
+    color: $primary-color-1;
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    text-align: center;
+  }
+
+  @include element(content) {
+    padding: 28px 39px;
+
+    @include modifier(with-divider) {
+      border-top: solid 2px $primary-color-5;
+    }
+  }
+}
+
+@include block(collapse-trigger) {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+
+  &::after {
+    background: url('../images/icon-triangle-light.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 8px;
+    content: '';
+    height: 16px;
+    margin-left: 5px;
+    transition: all 0.3s linear;
+    width: 16px;
+  }
+
+  &.collapsed {
+    &::after {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@include block(tpi-form) {
+  font-size: 15px;
+
+  @include element(action-container) {
+    text-align: center;
+
+    .tpi-button {
+      padding-bottom: 9px;
+      padding-top: 9px;
+    }
+  }
+
+  @include element(button-container) {
+    text-align: right;
+
+    .tpi-button {
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+  }
+
+  @include element(button-container-left) {
+
+    .tpi-button {
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
+  }
+
+  @include element(row) {
+    align-items: center;
+    display: flex;
+    margin-bottom: 24px;
+
+    @include modifier(align-top) {
+      align-items: flex-start;
+    }
+
+    @include modifier(hidden) {
+      display: none;
+    }
+
+    @include modifier(hidden-color) {
+      background-color: $secondary-color-1;
+      display: none;
+    }
+  }
+
+  @include element(label) {
+    align-items: center;
+    display: flex;
+    flex: 0 0 150px;
+    white-space: nowrap;
+    margin-bottom: .5rem;
+  }
+
+  @include element(col) {
+    flex: 0 0 60%;
+    height: 100%;
+    margin-bottom: .5rem;
+    word-break: break-all;
+    @media (max-width: 992px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  @include element(col-long) {
+    flex: 0 0 80%;
+    height: 100%;
+
+    @media (max-width: 992px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  @include element(note) {
+    align-items: center;
+    background-color: $secondary-color-7;
+    color: $text-color-1;
+    display: flex;
+    flex: 0 0 200px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  @include element(case-stats) {
+    align-items: center;
+    color: $text-color-4;
+    display: flex;
+    flex: 0 0 150px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  @include element(inline-group) {
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+    @include modifier(block) {
+      @include block(tpi-input) {
+        flex: 1 1 100%;
+      }
+    }
+
+    label {
+      margin-bottom: 0;
+      margin-left: 20px;
+      margin-right: 20px;
+      white-space: nowrap;
+
+      &:first-child {
+        margin-left: 0;
+        @media (max-width: 992px) {
+          width: 100px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        white-space: nowrap;
+      }
+    }
+    @media (max-width: 992px) {
+      justify-content: space-between;
+      padding-bottom: 24px;
+    }
+  }
+
+  @include element(inline-control-small) {
+      width: 130px;
+      @media (max-width: 992px) {
+        width: 80%;
+      }
+    }
+
+  @include element(inline-control) {
+    width: 230px;
+    @media (max-width: 992px) {
+      width: 80%;
+    }
+  }
+
+  .row {
+    padding-bottom: 24px;
+
+    @media (max-width: 992px) {
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+@include block(tpi-radio) {
+  @include element(inner) {
+    align-items: center;
+    display: flex;
+    justify-content: start;
+  }
+
+  @include element(item) {
+    cursor: pointer;
+    margin-right: 26px;
+    padding-left: 25px;
+    position: relative;
+
+    input {
+      cursor: pointer;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: z('radio', 'input');
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include element(mark) {
+    background: url('../images/radio-normal.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+    height: 20px;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    z-index: z('radio', 'mark');
+
+    &::after {
+      background: $primary-color-1;
+      border-radius: 50%;
+      content: '';
+      height: 20px;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) scale(1.5);
+      transition: all 0.3s linear;
+      width: 20px;
+      z-index: z('radio', 'effect');
+    }
+  }
+
+  input:checked ~ &__mark {
+    background: url('../images/radio-action.png');
+
+    &::after {
+      opacity: 0.8;
+      transform: translateY(-50%) scale(0.5);
+    }
+  }
+
+  label {
+    cursor: pointer;
+    margin-bottom: 0;
+  }
+}
+
+%push-status-icon-base {
+  border-radius: 50%;
+  content: '';
+  height: 9px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9px;
+}
+
+@include block(push-status) {
+  color: $text-color-1;
+  font-size: 15px;
+  font-weight: 500;
+  padding-left: 15px;
+  position: relative;
+
+  @include modifier(fail) {
+    &::before {
+      @extend %push-status-icon-base;
+
+      background: $text-color-7;
+    }
+  }
+
+  @include modifier(success) {
+    &::before {
+      @extend %push-status-icon-base;
+
+      background: $text-color-4;
+    }
+  }
+
+  @include modifier(other) {
+    &::before {
+      @extend %push-status-icon-base;
+
+      background: $text-color-3;
+    }
+  }
+}
+
+@include block(tpi-text-green) {
+  color: $text-color-4;
+}
+
+@include block(tpi-text-blue) {
+  color: $text-color-5;
+  @include element(hidden) {
+    display: none;
+  }
+}
+
+@include block(tpi-text-orange) {
+  color: $text-color-6;
+}
+
+@include block(tpi-text-violet) {
+  color: $secondary-color-3;
+}
+
+@include block(tpi-mark-label) {
+  background: $secondary-color-7;
+  border-radius: 4px;
+  overflow: hidden;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+@include block(tpi-horizontal-container) {
+  display: flex;
+  margin-bottom: 30px;
+
+  @include element(header) {
+    align-items: center;
+    background: $secondary-color-5;
+    border: 1px solid $primary-color-3;
+    border-radius: 8px 0 0 8px;
+    display: flex;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+
+  @include element(body) {
+    align-items: center;
+    border-bottom: 1px solid $primary-color-3;
+    border-top: 1px solid $primary-color-3;
+    display: flex;
+    flex: 1 1 100%;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @include element(col-long) {
+    flex: 0 0 80%;
+    height: 100%;
+
+    @media (max-width: 992px) {
+      flex: 1 1 100%;
+    }
+  }
+
+  @include element(footer) {
+    align-items: center;
+    border: 1px solid $primary-color-3;
+    border-radius: 0 8px 8px 0;
+    display: flex;
+    height: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@include block(tpi-info-tooltip) {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+
+@include block(breadcrumbs) {
+  display: flex;
+  float: right;
+  text-align: right;
+
+  @include element(item) {
+    align-items: center;
+    display: flex;
+    font-size: medium;
+    font-weight: normal;
+    margin-bottom: 0;
+
+    &:not(:last-child) {
+      &::after {
+        content: '>';
+        display: block;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+@include block(ok){
+  background-position: center;
+  display: inline-block;
+  height: 13px;
+  width: 16px;
+  background-image: url('../images/icon-correct.png');
+}
+
+@include block(center-checkBox){
+  text-align: center;
+}
+// 覆寫 bootstrap-datepicker 樣式
+/* stylelint-disable selector-max-compound-selectors, selector-no-qualifying-type */
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active {
+  background-color: $primary-color-1;
+  border-color: $primary-color-1;
+}
+
+.datepicker table tr td.active:active:hover,
+.datepicker table tr td.active.highlighted:active:hover,
+.datepicker table tr td.active.active:hover,
+.datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active:active:focus,
+.datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.highlighted.active:focus,
+.datepicker table tr td.active:active.focus,
+.datepicker table tr td.active.highlighted:active.focus,
+.datepicker table tr td.active.active.focus,
+.datepicker table tr td.active.highlighted.active.focus {
+  background-color: $primary-color-1;
+  border-color: $primary-color-1;
+}
+/* stylelint-enable selector-max-compound-selectors, selector-no-qualifying-type */

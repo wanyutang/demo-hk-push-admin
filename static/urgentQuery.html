@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>緊急推播資料查詢 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.zh-TW.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/urgentQuery.js"></script>
+    <script src="./js/menu.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-container__menu">
+        <div class="menu"></div>
+        <div class="page-container__version">
+          varsion：3.2.4
+        </div>
+      </div>
+      <div class="page-container__main">
+        <div class="page-container__header">
+          <div class="page-container__title">推播管理平台</div>
+          <div class="page-container__info">
+            <span>目前使用者：吳傑森</span>
+            <span>單位：民政局</span>
+            <button class="tpi-button tpi-button--small">登出</button>
+          </div>
+        </div>
+        <div class="page-container__content">
+          <div class="page-title">緊急推播資料查詢</div>
+          <div class="tpi-card">
+            <div class="tpi-card__header">
+              <div
+                class="collapse-trigger"
+                data-toggle="collapse"
+                href="#collapseTarget"
+              >
+                查詢區間
+              </div>
+            </div>
+            <div class="collapse show" id="collapseTarget">
+              <div class="tpi-card__content tpi-card__content--with-divider">
+                <form action="#" novalidate class="tpi-form">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                      <div class="tpi-form__inline-group">
+                        <label for="app">狀態</label>
+                        <div class="tpi-selectric--other tpi-form__inline-control">
+                          <select name="status" id="status">
+                            <option value="請選擇">
+                              請選擇
+                            </option>
+                            <option value="已審核">
+                              已審核
+                            </option>
+                            <option value="待審核">
+                              待審核
+                            </option>
+                            <option value="退件">
+                              退件
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-4">
+                      <div class="tpi-form__inline-group">
+                        <label for="app">預計發送時間</label>
+                        <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                          <div class="tpi-input__inner">
+                            <input
+                              type="text"
+                              class="tpi-input__other-input"
+                              name="pushDate"
+                              id="pushDate"
+                              value="2019/10/01"
+                              readonly
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tpi-form__action-container">
+                    <button class="tpi-button tpi-button--primary">搜尋</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="tpi-table tpi-table--with-margin">
+            <div class="tpi-table__inner">
+              <table class="tpi-table__table">
+                <thead>
+                  <tr>
+                    <th>項次</th>
+                    <th class="text-left">推播主旨</th>
+                    <th class="text-left">上傳人員</th>
+                    <th class="text-left">建立時間</th>
+                    <th class="text-left">預計發送時間</th>
+                    <th class="text-left">審核人員</th>
+                    <th class="text-left">審核時間</th>
+                    <th class="text-left">案件狀態</th>
+                    <th class="text-left"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="text-left">test push</td>
+                    <td class="text-left">10501111<br />xx岩</td>
+                    <td class="text-left">2019-10-10<br />18:10:01</td>
+                    <td class="text-left">2019-10-10<br />20:10:01</td>
+                    <td class="text-left">1011229<br />xx輝</td>
+                    <td class="text-left">2019-10-10<br />19:10:01</td>
+                    <td class="text-left">已審核</td>
+                    <td class="text-left">
+                      <button class="tpi-button tpi-button--secondary">檢視</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="text-left">test push</td>
+                    <td class="text-left">10501111<br />xx岩</td>
+                    <td class="text-left">2019-10-10<br />18:10:01</td>
+                    <td class="text-left">2019-10-10<br />20:10:01</td>
+                    <td class="text-left"></td>
+                    <td class="text-left"></td>
+                    <td class="text-left">待審核</td>
+                    <td class="text-left">
+                      <button class="tpi-button tpi-button--secondary">檢視</button>
+                      <button class="tpi-button tpi-button--secondary">審閱</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tpi-table__pagination tpi-pagination">
+              <div class="tpi-pagination__previous"></div>
+              <div
+                class="tpi-pagination__page-button tpi-pagination__page-button--active"
+              >
+                1
+              </div>
+              <div class="tpi-pagination__page-button">2</div>
+              <div class="tpi-pagination__page-button">3</div>
+              <div class="tpi-pagination__page-button">4</div>
+              <div class="tpi-pagination__page-button">5</div>
+              <div class="tpi-pagination__next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

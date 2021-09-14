@@ -1,0 +1,63 @@
+<div class="modal fade show" id="dialog-message" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+            <div class="page-title">範本查詢</div>
+            <div class="page-button">
+                <div class="tpi-form tpi-form__button-container">
+                    <button 
+                    class="tpi-button tpi-button--secondary" 
+                    onclick="displayModal('hide');">
+                    離開
+                    </button>
+                </div>
+            </div>  
+            <div class="tpi-table tpi-table--with-margin">
+                <div class="tpi-table__inner">
+                    <table class="tpi-table__table">
+                        <thead>
+                        <tr>
+                            <th class="text-left">範本名稱</th>
+                            <th class="text-left">範本內容</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="text-left">版本更新通知</td>
+                            <td class="text-left">版本已更新，請記得更新系統。</td>
+                            <td>
+                            <button class="tpi-button tpi-button--secondary" type="button" onclick="tempClick()" name="tempSelect">
+                                選擇
+                            </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">系統暫停公告</td>
+                            <td class="text-left">系統將於%s~%s進行維運，請耐心等候。</td>
+                            <td>
+                            <button class="tpi-button tpi-button--secondary" type="button" onclick="tempClick()" name="tempSelect">
+                                選擇
+                            </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-left">網路安全提醒</td>
+                            <td class="text-left">為保護您的個人資訊，請固定時間進行密碼修改。</td>
+                            <td>
+                            <button class="tpi-button tpi-button--secondary" type="button" onclick="tempClick()" name="tempSelect">
+                                選擇
+                            </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>   
+        </div>
+       </div>
+    </div>
+</div>
+    
+
+  

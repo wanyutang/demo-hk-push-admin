@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>人員群組管理 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/menu.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+        <div class="page-container__menu">
+            <div class="menu"></div>
+            <div class="page-container__version">
+                varsion：3.2.4
+            </div>
+        </div>
+        <div class="page-container__main">
+            <div class="page-container__header">
+                <div class="page-container__title">推播管理平台</div>
+                <div class="page-container__info">
+                    <span>目前使用者：吳傑森(jason)</span>
+                    <button class="tpi-button tpi-button--small">登出</button>
+                </div>
+            </div>
+            <div class="page-container__content">
+                <div class="page-title">人員群組管理
+                    <div class="breadcrumbs clearfix">
+                        <label class="breadcrumbs__item">權限管理</label>
+                        <label class="breadcrumbs__item">人員群組管理</label>
+                    </div>
+                </div>
+                <div class="page-button">
+                    <div class="text-right">
+                        <button class="tpi-button tpi-button--primary" onclick="location.href='peopleGroupsAdd.html'">
+                            新增群組
+                        </button>
+                    </div>
+                </div>
+                <div class="tpi-card">
+                    <div class="tpi-table tpi-table--with-margin">
+                        <div class="tpi-table__inner">
+                            <table class="tpi-table__table">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10%">群組 ID</th>
+                                        <th style="width: 18%">群組名稱</th>
+                                        <th style="width: 25%">授權角色 (主管 /承辦)</th>
+                                        <th style="width: 20%">建立時間</th>
+                                        <th style="width: 10%">建立者</th>
+                                        <th style="width: 18%">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01</td>
+                                        <td>客服主管</td>
+                                        <td>Biz Checker</td>
+                                        <td>2017/09/30 14:00:00</td>
+                                        <td>Alex</td>
+                                        <td>
+                                            <button onclick="location.href='peopleGroupsEdit.html'" class="tpi-button tpi-button--modify"
+                                                style="margin-right: 5px;" type="button">編輯</button>
+                                            <button onclick="location.href='peopleGroupsChange.html'" class="tpi-button tpi-button--modify"
+                                                type="button">人員群組變更</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>客服專員</td>
+                                        <td>Biz Maker</td>
+                                        <td>2017/09/30 14:00:00</td>
+                                        <td>Alex</td>
+                                        <td>
+                                            <button onclick="location.href='peopleGroupsEdit.html'" class="tpi-button tpi-button--modify"
+                                                style="margin-right: 5px;" type="button">編輯</button>
+                                            <button onclick="location.href='peopleGroupsChange.html'" class="tpi-button tpi-button--modify"
+                                                type="button">人員群組變更</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>系統審核主管</td>
+                                        <td>Digital Checker</td>
+                                        <td>2017/09/30 14:00:00</td>
+                                        <td>Alex</td>
+                                        <td>
+                                            <button onclick="location.href='peopleGroupsEdit.html'" class="tpi-button tpi-button--modify"
+                                                style="margin-right: 5px;" type="button">編輯</button>
+                                            <button onclick="location.href='peopleGroupsChange.html'" class="tpi-button tpi-button--modify"
+                                                type="button">人員群組變更</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>系統管理員</td>
+                                        <td>Digital Maker</td>
+                                        <td>2017/09/30 14:00:00</td>
+                                        <td>Alex</td>
+                                        <td>
+                                            <button onclick="location.href='peopleGroupsEdit.html'" class="tpi-button tpi-button--modify"
+                                                style="margin-right: 5px;" type="button">編輯</button>
+                                            <button onclick="location.href='peopleGroupsChange.html'" class="tpi-button tpi-button--modify"
+                                                type="button">人員群組變更</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>

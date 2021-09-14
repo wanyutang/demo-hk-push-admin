@@ -1,0 +1,74 @@
+@import 'variable';
+@import 'mixin';
+
+body {
+  color: $text-color-1;
+}
+
+@include block(development-container) {
+  margin-top: 30px;
+  padding: 10px 12px;
+  padding-bottom: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 100px;
+  }
+}
+
+@include block(component-info) {
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  margin: 30px 10px;
+  padding: 10px 12px;
+
+  @include element(header) {
+    color: $text-color-3;
+
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  @include element(container) {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow: hidden;
+
+    .position-relative {
+      height: 300px;
+    }
+  }
+
+  @include element(code) {
+    pre {
+      margin-bottom: 0;
+    }
+
+    code {
+      padding-left: 20px;
+    }
+  }
+
+  @include modifier(dark) {
+    background-color: $primary-color-1;
+
+    @include block(component-info) {
+      @include element(header) {
+        color: $secondary-color-4;
+      }
+    }
+  }
+}
+
+@include block(toggl-button) {
+  background: $secondary-color-1;
+  border-left: solid 5px $secondary-color-3;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  padding: 10px 18px;
+}
+

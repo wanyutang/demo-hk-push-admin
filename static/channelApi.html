@@ -1,0 +1,194 @@
+<div class="modal fade show" id="dialog-api" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="page-title">綁定API選擇</div>
+                <div class="page-button">
+                    <div class="tpi-form tpi-form__button-container">
+                        <button class="tpi-button tpi-button--secondary" onclick="displayModalApi('hide');">
+                            離開
+                        </button>
+                    </div>
+                </div>
+                <div class="tpi-table tpi-table--with-margin">
+                    <div class="tpi-table__inner">
+                        <table class="tpi-table__table">
+                            <thead>
+                            <tr>
+                                <th>API名稱</th>
+                                <th>說明</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PUSH0001:addUser</td>
+                                    <td>addUser</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0001:addUser" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0002:deleteUser</td>
+                                    <td>deleteUser</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0002:deleteUser" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0004:queryUser</td>
+                                    <td>queryUser</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0004:queryUser" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0005:appLoginEvent</td>
+                                    <td>appLoginEvent</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0005:appLoginEvent" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                      
+                                  <tr>
+                                    <td>PUSH0006:bindDevice</td>
+                                    <td>bindDevice</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0006:bindDevice" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0007:queryUserDevices</td>
+                                    <td>queryUserDevices</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0007:queryUserDevices" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0010:updateMsgItemConf</td>
+                                    <td>updateMsgItemConf</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0010:updateMsgItemConf" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0011:updatePushConf</td>
+                                    <td>updatePushConf</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0011:updatePushConf" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0012:releaseDevice</td>
+                                    <td>releaseDevice</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0012:releaseDevice" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0101:addDevice</td>
+                                    <td>addDevice</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0101:addDevice" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0102:deleteDevice</td>
+                                    <td>deleteDevice</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0102:deleteDevice" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0103:updateDevice</td>
+                                    <td>updateDevice</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0103:updateDevice" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0104:queryDevice</td>
+                                    <td>queryDevice</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0104:queryDevice" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0201:pushMessage</td>
+                                    <td>pushMessage</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0201:pushMessage" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0202:queryMessages</td>
+                                    <td>queryMessages</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0202:queryMessages" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0203:updateMessageStatus</td>
+                                    <td>updateMessageStatus</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0203:updateMessageStatus" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>PUSH0205:getMessageItems</td>
+                                    <td>getMessageItems</td>
+                                    <td>
+                                      <label>
+                                        <input type="checkbox" value="PUSH0205:getMessageItems" name="apiCheckbox">
+                                      </label>
+                                    </td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>   
+
+
+            </div>
+            <div class="modal-footer tpi-form__button-container">
+                <button type="button" class="tpi-button tpi-button--secondary" onclick="allApiCheck()">全選</button>
+                <button type="button" class="tpi-button tpi-button--secondary" onclick="falseApiCheck()">取消全選</button>
+                <button class="tpi-button tpi-button--secondary" type="button" onclick="apiClick()" name="tempSelect">
+                    選擇
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

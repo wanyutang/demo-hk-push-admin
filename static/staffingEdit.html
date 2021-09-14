@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>人員設定-編輯人員 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        $(function () {
+            $('div[class^=tpi-selectric]').find('select').selectric({
+                arrowButtonMarkup: '<span class="arrow"></span>',
+                maxHeight: 250
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page-container__menu">
+            <div class="menu"></div>
+            <div class="page-container__version">
+                varsion：3.2.4
+            </div>
+        </div>
+        <div class="page-container__main">
+            <div class="page-container__header">
+                <div class="page-container__title">推播管理平台</div>
+                <div class="page-container__info">
+                    <span>目前使用者：吳傑森(jason)</span>
+                    <button class="tpi-button tpi-button--small">登出</button>
+                </div>
+            </div>
+            <div class="page-container__content">
+                <div class="page-title">人員編輯
+                    <div class="breadcrumbs clearfix">
+                        <label class="breadcrumbs__item">權限管理</label>
+                        <label class="breadcrumbs__item">人員設定</label>
+                    </div>
+                </div>
+                <div class="tpi-card">
+                    <div class="tpi-card__content">
+                        <form role="form" data-toggle="validator" class="tpi-form">
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    <span class="tpi-text-blue">*</span>
+                                    使用者 ID
+                                </label>
+                                <div class="tpi-form__col">
+                                    1234567
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    <span class="tpi-text-blue">*</span>
+                                    使用者名稱
+                                </label>
+                                <div class="tpi-form__col">
+                                    <input type="text" class="tpi-input__other-input" name="Name" placeholder="請填入姓名"
+                                        autocomplete="off" value="George" />
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    <span class="tpi-text-blue">*</span>
+                                    電子信箱
+                                </label>
+                                <div class="tpi-form__col">
+                                    <input type="text" class="tpi-input__other-input" name="Name" placeholder="請填入Email"
+                                        autocomplete="off" value="george@tpi.com.tw" />
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    <span class="tpi-text-blue">*</span>
+                                    使用者群組
+                                </label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-selectric--other">
+                                        <select>
+                                            <option>全部選擇</option>
+                                            <option value="客服主管">客服主管</option>
+                                            <option value="客服專員">客服專員</option>
+                                            <option value="系統審核主管">系統審核主管</option>
+                                            <option value="系統管理員">系統管理員</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>狀態</label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-radio">
+                                        <div class="tpi-radio__inner">
+                                            <div class="tpi-radio__item">
+                                                <input type="radio" name="status" id="status-1" value="Active" checked />
+                                                <div class="tpi-radio__mark"></div>
+                                                <label for="status-1">正常</label>
+                                            </div>
+                                            <div class="tpi-radio__item">
+                                                <input type="radio" name="status" id="status-2" value="Locked" />
+                                                <div class="tpi-radio__mark"></div>
+                                                <label for="status-2">鎖定</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    <!-- Mobile Device Info. for testing notification -->
+                                    測試用的手機資訊
+                                </label>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    測試裝置
+                                </label>
+                                <div class="tpi-form__col">
+                                    <input type="text" class="tpi-input__other-input" name="Name" placeholder="請填入裝置名稱"
+                                        autocomplete="off" value="iphone" />
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    推播碼
+                                </label>
+                                <div class="tpi-form__col">
+                                    <input type="text" class="tpi-input__other-input" name="Name" placeholder="請填入推播碼"
+                                        autocomplete="off" value="" />
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label">
+                                    手機作業系統
+                                </label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-radio">
+                                        <div class="tpi-radio__inner">
+                                            <div class="tpi-radio__item">
+                                                <input type="radio" name="device" id="device-1" value="Android" />
+                                                <div class="tpi-radio__mark"></div>
+                                                <label for="device-1">Android</label>
+                                            </div>
+                                            <div class="tpi-radio__item">
+                                                <input type="radio" name="device" id="device-2" value="IOS" checked/>
+                                                <div class="tpi-radio__mark"></div>
+                                                <label for="device-2">IOS</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__action-container">
+                                <button class="tpi-button tpi-button--secondary" type="button"
+                                    onclick="location.href='staffing.html'">離開</button>
+                                <button class="tpi-button tpi-button--primary" type="button">儲存</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

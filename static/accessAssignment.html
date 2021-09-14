@@ -1,0 +1,365 @@
+<script src="./js/accessAssignment.js"></script>
+<div class="modal fade" id="assignment" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header modal-bg-red">
+                <div class="page-title" id="myModalLabel">功能權限</div>
+                <div class="page-button">
+                    <div class="tpi-form tpi-form__button-container">
+                        <button class="tpi-button tpi-button--secondary" onclick="displayModal('assignment','hide');">
+                            離開
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body" style="text-align: center;text-align: left;">
+                <div class="tpi-table tpi-table--with-margin">
+                    <div class="tpi-table__inner">
+                        <table class="tpi-table__report">
+                            <thead>
+                                <tr>
+                                    <th style="text-align:center;">功能名稱</th>
+                                    <th style="text-align:center;">確認</th>
+                                </tr>
+                            </thead>
+                            <tr class="tdheader">
+                                <td>權限管理 </td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>人員群組管理
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="人員群組管理" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>群組功能管理-功能名稱編輯
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="群組功能管理-功能名稱編輯" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>群組功能管理-群組功能管理
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="群組功能管理-群組功能管理" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>人員設定
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="人員設定" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>推播平台管理</td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>APP 設定</td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="APP 設定" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Channel 設定</td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="Channel 設定" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>API 設定</td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="API 設定" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>通知項目管理 </td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>通知項目設定
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="通知項目設定" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>行銷通知</td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>行銷通知名單匯入
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="行銷通知名單匯入" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>行銷通知建立
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="行銷通知建立" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>行銷通知查詢
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="行銷通知查詢" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>行銷通知審核
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="行銷通知審核" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>行銷通知歷史資料查詢
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="行銷通知歷史資料查詢" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>優惠通知</td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>優惠通知建立
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="優惠通知建立" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>優惠通知名單匯入
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="優惠通知名單匯入" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>專屬優惠庫存查詢
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="專屬優惠庫存查詢" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>補發優惠通知
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="補發優惠通知" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>補發優惠通知審核
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="補發優惠通知審核	
+                                                            " name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>客服查詢服務</td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>通知訊息查詢
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="通知訊息查詢" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>報表</td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>行銷類報表</td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="行銷類報表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>帳務類報表
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="帳務類報表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="tdheader">
+                                <td>安控報表
+                                </td>
+                                <td>
+                            </tr>
+                            <tr>
+                                <td>使用者名單報表
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="使用者名單報表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>功能群組權限對照表
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="功能群組權限對照表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>違規嵌入報表
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="違規嵌入報表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>逾權存取報表
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="逾權存取報表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>靜止不使用帳號清單
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="靜止不使用帳號清單" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>使用者帳號維護活動報表
+                                </td>
+                                <td>
+                                    <div class="center-checkBox">
+                                        <label>
+                                            <input type="checkbox" value="使用者帳號維護活動報表" name="funcCheckBox">
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer tpi-form__button-container">
+                <button type="button" class="tpi-button tpi-button--secondary" onclick="allCheck()">全選</button>
+                <button type="button" class="tpi-button tpi-button--secondary" onclick="falseCheck()">取消全選</button>
+                <button type="button" class="tpi-button tpi-button--secondary" id="ms-1" data-dismiss="modal"
+                    onclick="showCheck()">確認</button>
+            </div>
+        </div>
+    </div>
+</div>

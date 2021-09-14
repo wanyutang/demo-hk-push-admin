@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>推播平台管理 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/popper.js/popper.min.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/channelNew.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        $(function () {
+            $('#select-demo-1').selectric({
+                arrowButtonMarkup: '<span class="arrow"></span>',
+                maxHeight: 250
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page-container__menu">
+            <div class="menu"></div>
+            <div class="page-container__version">
+                varsion：3.2.4
+            </div>
+        </div>
+        <div class="page-container__main">
+            <div class="page-container__header">
+                <div class="page-container__title">推播管理平台</div>
+                <div class="page-container__info">
+                    <span>目前使用者：吳傑森(jason)</span>
+                    <button class="tpi-button tpi-button--small">登出</button>
+                </div>
+            </div>
+            <div class="page-container__content">
+                <div class="page-title">Channel 編輯
+                    <div class="breadcrumbs clearfix">
+                        <label class="breadcrumbs__item">推播平台管理</label>
+                        <label class="breadcrumbs__item">Channel 設定</label>
+                    </div>
+                </div>
+                <div class="tpi-card">
+                    <div class="tpi-card__content">
+                        <form action="#" novalidate class="tpi-form">
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>Channel ID</label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-input tpi-input--disabled">
+                                        <div class="tpi-input__inner">
+                                            <input type="text" class="tpi-input__other-input" name="tempID" id="tempID"
+                                                placeholder="placeholder" autocomplete="off" value="C001" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>Channel 名稱</label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-input">
+                                        <div class="tpi-input__inner">
+                                            <input type="text" class="tpi-input__other-input" name="tempName"
+                                                id="tempName" placeholder="請填入Channel 名稱" autocomplete="off"
+                                                value="IB/MB" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>Channel 密碼</label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-input">
+                                        <button id="pwchange" class="tpi-button tpi-button--temptext" type="button"
+                                        onclick="changeChannel();">修改</button>
+                                        <div class="tpi-input__inner-flex" id="pwwrite" hidden>
+                                            <input type="password" class="tpi-input__other-input" name="tempcode"
+                                                id="tempcode" placeholder="請填入Channel 密碼" autocomplete="off" value="" />
+                                            <button class="tpi-button tpi-button--temptext" type="button"
+                                                onclick="cancelChannel();">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>host / IP</label>
+                                <div class="tpi-form__col-long">
+                                    <div id="showBlock">
+                                        <div class="tpi-input tpi-radio" style="display: flex;margin-bottom: 10px;">
+                                            <div class="tpi-input__inner-flex">
+                                                <input type="text" class="tpi-input__other-input" name="host1"
+                                                    id="host1" placeholder="請填入host" autocomplete="off"
+                                                    value="acp1.sch.com" />
+                                                <input type="text" class="tpi-input__other-input" name="ip1" id="ip1"
+                                                    placeholder="請填入IP" autocomplete="off" value="102.2.1.101" />
+                                            </div>
+                                            <div class="tpi-radio__inner">
+                                                <div class="tpi-radio__item">
+                                                    <input type="radio" name="hostIP" id="radio-ip-1" value="停用" />
+                                                    <div class="tpi-radio__mark"></div>
+                                                    <label for="ipUseStatus-1">停用</label>
+                                                </div>
+                                                <div class="tpi-radio__item">
+                                                    <input type="radio" name="hostIP" id="radio-ip-2" value="啟用"
+                                                        checked />
+                                                    <div class="tpi-radio__mark"></div>
+                                                    <label for="ipUseStatus-2">啟用</label>
+                                                </div>
+                                            </div>
+                                            <div class="tpi-form__button-container">
+                                                <button type="button" class="tpi-button tpi-button--delete removeip"
+                                                    onclick="removeIP()">刪除</button>
+                                            </div>
+                                        </div>
+                                        <div class="tpi-input tpi-radio" style="display: flex;margin-bottom: 10px;">
+                                            <div class="tpi-input__inner-flex">
+                                                <input type="text" class="tpi-input__other-input" name="host2"
+                                                    id="host2" placeholder="請填入host" autocomplete="off"
+                                                    value="acp2.sch.com" />
+                                                <input type="text" class="tpi-input__other-input" name="ip2" id="ip2"
+                                                    placeholder="請填入IP" autocomplete="off" value="102.2.1.102" />
+                                            </div>
+                                            <div class="tpi-radio__inner">
+                                                <div class="tpi-radio__item">
+                                                    <input type="radio" name="hostIPnum" id="radio-ip-1" value="停用"
+                                                        checked />
+                                                    <div class="tpi-radio__mark"></div>
+                                                    <label for="ipUseStatus-1">停用</label>
+                                                </div>
+                                                <div class="tpi-radio__item">
+                                                    <input type="radio" name="hostIPnum" id="radio-ip-2" value="啟用" />
+                                                    <div class="tpi-radio__mark"></div>
+                                                    <label for="ipUseStatus-2">啟用</label>
+                                                </div>
+                                            </div>
+                                            <div class="tpi-form__button-container">
+                                                <button type="button" class="tpi-button tpi-button--delete removeip"
+                                                    onclick="removeIP()">刪除</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tpi-form__button-container-left">
+                                        <button class="tpi-button tpi-button--primary" onclick="addHost()"
+                                            type="button">
+                                            新增
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"></label>
+
+                            </div>
+                            <div class="tpi-form__row msgConTypeCode">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>綁定APP
+                                </label>
+                                <div class="tpi-form__col">
+                                    <div id="appchoose">
+                                        <div id="showAPP">MB</div>
+                                    </div>
+                                    <button class="tpi-button tpi-button--temptext" type="button"
+                                        onclick="displayModalAPP('show');">APP查詢</button>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row msgConTypeCode">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>綁定API
+                                </label>
+                                <div class="tpi-form__col">
+                                    <div id="apichoose">
+                                        <div class="showAPI">PUSH0001:addUser</div>
+                                        <div class="showAPI">PUSH0002:deleteUser</div>
+                                        <div class="showAPI">PUSH0004:queryUser</div>
+                                        <div class="showAPI">PUSH0005:appLoginEvent</div>
+                                        <div class="showAPI">PUSH0006:bindDevice</div>
+                                        <div class="showAPI">PUSH0007:queryUserDevices</div>
+                                        <div class="showAPI">PUSH0010:updateMsgItemConf</div>
+                                        <div class="showAPI">PUSH0011:updatePushConf</div>
+                                        <div class="showAPI">PUSH0012:releaseDevice</div>
+                                        <div class="showAPI">PUSH0101:addDevice</div>
+                                        <div class="showAPI">PUSH0102:deleteDevice</div>
+                                        <div class="showAPI">PUSH0103:updateDevice</div>
+                                        <div class="showAPI">PUSH0104:queryDevice</div>
+                                        <div class="showAPI">PUSH0202:queryMessages</div>
+                                        <div class="showAPI">PUSH0203:updateMessageStatus</div>
+                                        <div class="showAPI">PUSH0205:getMessageItems</div>
+                                    </div>
+                                    <button class="tpi-button tpi-button--temptext" type="button"
+                                        onclick="displayModalApi('show');">API查詢</button>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>TPS
+                                    <div class="tpi-info-tooltip" data-toggle="tooltip" data-placement="top"
+                                        title="建議不超過30,上限200">
+                                        <span class="icon-info"></span>
+                                    </div>
+                                </label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-input">
+                                        <div class="tpi-input__inner">
+                                            <input type="text" class="tpi-input__other-input" name="tempNum"
+                                                id="tempNum" placeholder="請填入發送數量" autocomplete="off" value="5" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__row">
+                                <label class="tpi-form__label"><span class="tpi-text-blue">*</span>Channel狀態</label>
+                                <div class="tpi-form__col">
+                                    <div class="tpi-radio">
+                                        <div class="tpi-radio__inner">
+                                            <div class="tpi-radio__item">
+                                                <input type="radio" name="radio-status" id="radio-status-1"
+                                                    value="停用" />
+                                                <div class="tpi-radio__mark"></div>
+                                                <label for="apiUseStatus-1">停用</label>
+                                            </div>
+                                            <div class="tpi-radio__item">
+                                                <input type="radio" name="radio-status" id="radio-status-2" value="啟用"
+                                                    checked />
+                                                <div class="tpi-radio__mark"></div>
+                                                <label for="apiUseStatus-2">啟用</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tpi-form__action-container">
+                                <button class="tpi-button tpi-button--secondary" type="button"
+                                    onclick="location.href='apiChannel.html'">
+                                    離開
+                                </button>
+                                <button class="tpi-button tpi-button--primary" type="button"
+                                    onclick="location.href='apiChannel.html'">送出</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="APPQuery"></div>
+    <div class="ApiQuery"></div>
+</body>
+
+</html>

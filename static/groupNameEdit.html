@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>群組功能名稱編輯 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/menu.js"></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page-container__menu">
+            <div class="menu"></div>
+            <div class="page-container__version">
+                varsion：3.2.4
+            </div>
+        </div>
+        <div class="page-container__main">
+            <div class="page-container__header">
+                <div class="page-container__title">推播管理平台</div>
+                <div class="page-container__info">
+                    <span>目前使用者：吳傑森(jason)</span>
+                    <button class="tpi-button tpi-button--small">登出</button>
+                </div>
+            </div>
+            <div class="nav-bar page-container__nav-bar">
+                <a class="nav-bar__item" href="groupFunctionManagement.html">群組功能管理</a>
+                <a class="nav-bar__item nav-bar__item--active" href="groupNameEdit.html">功能名稱編輯</a>
+            </div>
+            <div class="page-container__content">
+                <div class="page-title">功能名稱編輯
+                    <div class="breadcrumbs clearfix">
+                        <label class="breadcrumbs__item">權限管理</label>
+                        <label class="breadcrumbs__item">群組功能管理</label>
+                    </div>
+                </div>
+                <div class="tpi-card">
+                    <div class="tpi-table tpi-table--with-margin">
+                        <div class="tpi-table__inner">
+                            <table class="tpi-table__report">
+                                <thead>
+                                    <tr>
+                                        <th>功能名稱(繁中)</th>
+                                        <th>功能名稱(英文)</th>
+                                        <th>更新時間</th>
+                                        <th>更新者</th>
+                                        <th stlye="min-width:10%">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody> 
+                                    <tr class="tdheader">
+                                        <td>權限管理</td>
+                                        <td>Access Control</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>人員群組管理</td>
+                                        <td>Group Management</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>群組功能管理-功能名稱編輯</td>
+                                        <td>Group Function Management - Function Name Editor</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>群組功能管理-群組功能管理</td>
+                                        <td>Group Function Management</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>人員設定</td>
+                                        <td>Personal Setting</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>推播平台管理</td>
+                                        <td>Push platform</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>APP 設定</td>
+                                        <td>APP Set Up</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Channel 設定</td>
+                                        <td>Channel Set Up</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>API 設定</td>
+                                        <td>API Set Up</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>通知項目管理</td>
+                                        <td>Notificatin</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>通知項目設定</td>
+                                        <td>Notificatin Set Up</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>行銷通知</td>
+                                        <td>Marketing Message</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>行銷通知名單匯入</td>
+                                        <td>Import Marketing Customer List</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>行銷通知建立</td>
+                                        <td>Marketing Message Establishment</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>行銷通知查詢</td>
+                                        <td>Marketing Message Inquiry</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>行銷通知審核</td>
+                                        <td>Marketing Message Approval</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>行銷通知歷史資料查詢</td>
+                                        <td>Marketing Message History Records Inquiry</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>優惠通知</td>
+                                        <td>Preferential Message</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>優惠通知名單匯入</td>
+                                        <td>Import Preferential Customer List</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>優惠通知建立</td>
+                                        <td>Preferential Message Establishment</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>專屬優惠庫存查詢</td>
+                                        <td>Preferential Coupon Stock Inquiry</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>補發優惠通知</td>
+                                        <td>Reissue Preferential Message</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>補發優惠通知審核</td>
+                                        <td>Reissue Preferential Message Approval</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>客服查詢服務</td>
+                                        <td>Customer Service Inquiry</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>通知訊息查詢</td>
+                                        <td>Notification Inquiry</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>報表</td>
+                                        <td>Report</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>行銷類報表</td>
+                                        <td>MIS Report</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>帳務類報表</td>
+                                        <td>Account Statement</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="tdheader">
+                                        <td>安控報表</td>
+                                        <td>S.T Report</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>使用者名單報表</td>
+                                        <td>User List Report</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>功能群組權限對照表</td>
+                                        <td>Access Matrix Report</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>違規嵌入報表</td>
+                                        <td>Sign-on Violation Report</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>逾權存取報表</td>
+                                        <td>Resource Violation Report</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>靜止不使用帳號清單</td>
+                                        <td>Dormant User Ids List</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>使用者帳號維護活動報表</td>
+                                        <td>User Ids Maintenance Activity Report</td>
+                                        <td>2017/02/20 11:00:00</td>
+                                        <td>0930401</td>
+                                        <td>
+                                            <div class="text-left btn-ft">
+                                                <a href="groupNameAdd.html" class="tpi-button tpi-button--modify"
+                                                    type="button">變更名稱</a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

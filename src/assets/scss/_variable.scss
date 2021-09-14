@@ -1,0 +1,35 @@
+$primary-color-1: #213f79;
+$primary-color-2: #213f79;
+$primary-color-3: #2e5fb2;
+$primary-color-4: #1c2537;
+$primary-color-5: #f7f8f9;
+$secondary-color-1: #eaeff5;
+$secondary-color-2: #9dabba;
+$secondary-color-3: #7e32a5;
+$secondary-color-4: #fff;
+$secondary-color-5: #e6effc;
+$secondary-color-6: #fbfbfb;
+$secondary-color-7: #e4e2e2;
+$text-color-1: #364052;
+$text-color-2: #9ea2ac;
+$text-color-3: #78777f;
+$text-color-4: #17b586;
+$text-color-5: #3a86df;
+$text-color-6: #f77c2d;
+$text-color-7: #e65100;
+
+$z-layers: (
+  'default': 1,
+  'menu': (
+    'container': 1000,
+    'main-item': 10,
+    'sub-container': -1
+  ),
+  'submenu': 999,
+  'mask': 500,
+  'radio': (
+    'input': 3,
+    'mark': 1,
+    'effect': 2
+  )
+);
