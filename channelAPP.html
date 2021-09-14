@@ -1,0 +1,49 @@
+<div class="modal fade show" id="dialog-app" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="page-title">綁定APP選擇</div>
+                <div class="page-button">
+                    <div class="tpi-form tpi-form__button-container">
+                        <button class="tpi-button tpi-button--secondary" onclick="displayModalAPP('hide');">
+                            離開
+                        </button>
+                    </div>
+                </div>
+                <div class="tpi-table tpi-table--with-margin">
+                    <div class="tpi-table__inner">
+                        <table class="tpi-table__table">
+                            <thead>
+                            <tr>
+                                <th class="text-left">APP名稱</th>
+                                <th class="text-left">說明</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-left">MB</td>
+                                <td class="text-left"></td>
+                                <td>
+                                    <label>
+                                        <input type="checkbox" value="MB" name="appCheckbox">
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>   
+
+
+            </div>
+            <div class="modal-footer tpi-form__button-container">
+                <button type="button" class="tpi-button tpi-button--secondary" onclick="allAppCheck()">全選</button>
+                <button type="button" class="tpi-button tpi-button--secondary" onclick="falseAppCheck()">取消全選</button>
+                <button class="tpi-button tpi-button--secondary" type="button" onclick="appClick()" name="tempSelect">
+                    選擇
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

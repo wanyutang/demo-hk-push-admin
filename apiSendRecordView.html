@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>API推播查詢 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.zh-TW.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/menu.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-container__menu">
+        <div class="menu"></div>
+        <div class="page-container__version">
+          varsion：3.2.4
+        </div>
+      </div>
+      <div class="page-container__main">
+        <div class="page-container__header">
+          <div class="page-container__title">推播管理平台</div>
+          <div class="page-container__info">
+            <span>目前使用者：吳傑森(jason)</span>
+            <button class="tpi-button tpi-button--small">登出</button>
+          </div>
+        </div>
+        <div class="page-container__content">
+          <div class="page-title">
+            API推播資料內容
+            <div class="breadcrumbs clearfix">
+              <label class="breadcrumbs__item">API推播查詢</label>
+              <label class="breadcrumbs__item">檢視</label>
+            </div>
+          </div>
+          <div class="tpi-card">
+            <div class="tpi-card__content">
+              <form action="apiSendRecord.html" novalidate class="tpi-form">
+                <div class="tpi-form__row">
+                    <label class="tpi-form__label">
+                      <div class="push-status push-status--success">推播已完成</div>
+                    </label>
+                    <label class="tpi-form__label">
+                      <div>總筆數<span class="px-1 tpi-text-blue">25</span>筆</div>
+                      <div>; 成功<span class="px-1 tpi-text-blue">10</span>筆</div>
+                      <div>; 失敗<span class="px-1 tpi-text-orange">5</span>筆</div>
+                      <div>; 不符合筆數<span class="px-1 tpi-text-orange">10</span>筆</div>
+                      </label>
+                </div>                
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送對象</label>
+                  <div class="tpi-form__col">
+                      所有APP會員
+                  </div>
+                </div>
+                <div class="tpi-form__row--hidden" id="marketingFile">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>名單檔案名稱</label>
+                  <div class="tpi-form__col">
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>推播裝置</label>
+                  <div class="tpi-form__col">
+                      兩者皆是
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送時間類型</label>
+                  <div class="tpi-form__col">
+                    自訂時間發送
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                    <label class="tpi-form__label"><span class="tpi-text-blue">*</span>預計發送時間</label>
+                    <div class="tpi-form__col">
+                        2020/10/01 16:00:00
+                    </div>
+                  </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>靜音模式</label>
+                  <div class="tpi-form__col">
+                    靜音
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                    <label class="tpi-form__label"><span class="tpi-text-blue">*</span>主旨名稱</label>
+                    <div class="tpi-form__col">
+                      疫情緊急通知專區
+                    </div>
+                  </div>
+                 <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>推播文字</label>
+                    <div class="tpi-form__col">
+                      因應疫情影響，為減少人員接觸，進出辦公室請配合測量體溫，謝謝。
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label">推播詳細內容</label>
+                    <div class="tpi-form__col">
+                  </div>
+                </div>
+                <div class="tpi-form__action-container">
+                  <button
+                    class="tpi-button tpi-button--secondary tpi-button--short">
+                    離開
+                  </button>
+                  <button
+                    class="tpi-button tpi-button--primary">
+                    下載不符合名單
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

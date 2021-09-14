@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>行銷推播資料維護編輯 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/popper.js/popper.min.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.zh-TW.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/marketingNew.js"></script>
+    <script src="./js/es/ckeditor/ckeditor.js"></script>
+    <script src="./js/menu.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-container__menu">
+        <div class="menu"></div>
+        <div class="page-container__version">
+          varsion：3.2.4
+        </div>
+      </div>
+      <div class="page-container__main">
+        <div class="page-container__header">
+          <div class="page-container__title">推播管理平台</div>
+          <div class="page-container__info">
+            <span>目前使用者：吳傑森(jason)</span>
+            <button class="tpi-button tpi-button--small">登出</button>
+          </div>
+        </div>
+        <div class="page-container__content">
+          <div class="page-title">推播資料編輯
+            <div class="breadcrumbs clearfix">
+              <label class="breadcrumbs__item">行銷推播</label>
+              <label class="breadcrumbs__item">推播資料申請</label>
+            </div>
+          </div>
+          <div class="tpi-card">
+            <div class="tpi-card__content">
+              <div action="#" novalidate class="tpi-form">
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>強制推播</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="push" id="push-1" value="是" checked/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">是</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="push" id="push-2" value="否" />
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">否</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送對象</label>
+                  <div class="tpi-form____col-long">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-push" id="radio-push-1" value="1" checked/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">所有會員</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-push" id="radio-push-2" value="2" />
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">自行上傳會員名單</label>
+                        </div>
+                        <!-- <div class="tpi-radio__item">
+                          <input type="radio" name="radio-push" id="radio-push-3" value="3" />
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-3">會員訂閱
+                            <span class="tpi-text-blue__hidden" id="memberDesc">(若無設定會員訂閱條件，將維持為預設的全部發送)</span>
+                          </label>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row--hidden" id="marketingFile">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>名單檔案名稱</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-selectric--other">
+                      <select name="app" id="app">
+                        <option value="">
+                          請選擇
+                        </option>
+                        <option value="CDM20200708001">
+                          CDM20200708001
+                        </option>
+                        <option value="CDM20200708002">
+                          CDM20200708002
+                        </option>
+                        <option value="CDM20200708003">
+                          CDM20200708003
+                        </option>
+                        <option value="CDM20200708004">
+                          CDM20200708004
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="tpi-form__row--hidden-color" id="gender">
+                  <label class="tpi-form__label">會員訂閱-性別</label>
+                    <div class="tpi-selectric--other tpi-form__inline-control">
+                      <select name="gender1" id="gender1">
+                        <option value="A">
+                          不限
+                        </option>
+                        <option value="M">
+                          男
+                        </option>
+                        <option value="F">
+                          女
+                        </option>
+                      </select>
+                    </div>  
+                </div>
+                <div class="tpi-form__row--hidden-color" id="age">
+                  <label class="tpi-form__label">會員訂閱-年齡</label>
+                  <div class="tpi-radio">
+                    <div class="tpi-radio__inner">
+                      <div class="tpi-radio__item">
+                        <input type="radio" name="radio-age" id="radio-age-1" value="1" checked/>
+                        <div class="tpi-radio__mark"></div>
+                        <label for="apiUseStatus-1">不限</label>
+                      </div>
+                      <div class="tpi-radio__item">
+                        <input type="radio" name="radio-age" id="radio-age-2" value="2" />
+                        <div class="tpi-radio__mark"></div>
+                        <label for="apiUseStatus-2">自行設定</label>
+                      </div>
+                      <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                        <div class="tpi-input__inner">
+                          <input
+                            type="text"
+                            class="tpi-input__other-input"
+                            name="startDate"
+                            id="startDate"
+                            value="2020/01/01"
+                            readonly
+                          />
+                        </div>
+                      </div>
+                      <label>~</label>
+                      <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                        <div class="tpi-input__inner">
+                          <input
+                            type="text"
+                            class="tpi-input__other-input"
+                            name="endDate"
+                            id="endDate"
+                            value="2020/12/31"
+                            readonly
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>  
+                </div>
+                <div class="tpi-form__row--hidden-color" id="area">
+                  <label class="tpi-form__label">會員訂閱-地區
+                    <div
+                    class="tpi-info-tooltip"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="(戶籍地/居住地)"
+                  >
+                    <span class="icon-info"></span>
+                  </div>
+                  </label>
+                  <div class="tpi-radio">
+                    <div class="tpi-radio__inner">
+                      <div class="tpi-radio__item">
+                        <input type="radio" name="radio-area" id="radio-area-1" value="1" checked/>
+                        <div class="tpi-radio__mark"></div>
+                        <label for="apiUseStatus-1">不限</label>
+                      </div>
+                      <div class="tpi-radio__item">
+                        <input type="radio" name="radio-area" id="radio-area-2" value="2" />
+                        <div class="tpi-radio__mark"></div>
+                        <label for="apiUseStatus-2">自行設定(最多三組)</label>
+                      </div>
+                      <div class="tpi-selectric--other tpi-form__inline-control-small">
+                        <select name="area1" id="area1">
+                          <option value="">
+                            請選擇
+                          </option>
+                          <option value="M">
+                            新興區
+                          </option>
+                          <option value="F">
+                            前金區
+                          </option>
+                          <option value="F">
+                            苓雅區
+                          </option>
+                          <option value="F">
+                            鹽埕區
+                          </option>
+                          <option value="F">
+                            鼓山區
+                          </option>
+                          <option value="F">
+                            旗津區
+                          </option>
+                        </select>
+                      </div>  
+                      &nbsp;或 &nbsp;
+                      <div class="tpi-selectric--other tpi-form__inline-control-small">
+                        <select name="area2" id="area2">
+                          <option value="">
+                            請選擇
+                          </option>
+                          <option value="M">
+                            新興區
+                          </option>
+                          <option value="F">
+                            前金區
+                          </option>
+                          <option value="F">
+                            苓雅區
+                          </option>
+                          <option value="F">
+                            鹽埕區
+                          </option>
+                          <option value="F">
+                            鼓山區
+                          </option>
+                          <option value="F">
+                            旗津區
+                          </option>
+                        </select>
+                      </div> 
+                      &nbsp;或 &nbsp;
+                      <div class="tpi-selectric--other tpi-form__inline-control-small">
+                        <select name="area3" id="area3">
+                          <option value="">
+                            請選擇
+                          </option>
+                          <option value="M">
+                            新興區
+                          </option>
+                          <option value="F">
+                            前金區
+                          </option>
+                          <option value="F">
+                            苓雅區
+                          </option>
+                          <option value="F">
+                            鹽埕區
+                          </option>
+                          <option value="F">
+                            鼓山區
+                          </option>
+                          <option value="F">
+                            旗津區
+                          </option>
+                        </select>
+                      </div> 
+                    </div> 
+                    </div>
+                  </div>  
+                </div>
+                <div class="tpi-form__row--hidden-color" id="subscriptionCategory">
+                  <label class="tpi-form__label">會員訂閱-主題</label>
+                    <div class="tpi-selectric--other tpi-form__inline-control">
+                      <select name="category1" id="category1">
+                        <option value="">
+                          請選擇
+                        </option>
+                        <option value="AA">
+                          即時交通資訊
+                        </option>
+                        <option value="AB">
+                          綜合行政
+                        </option>
+                        <option value="AC">
+                          民生消費休閒
+                        </option>
+                        <option value="AD">
+                          醫療保健
+                        </option>
+                      </select>
+                    </div>  
+                    <div class="tpi-selectric--other tpi-form__inline-control">
+                      <select name="category2" id="category2">
+                        <option value="">
+                          請選擇
+                        </option>
+                        <option value="001">
+                          事故
+                        </option>
+                        <option value="002">
+                          道路施工
+                        </option>
+                        <option value="003">
+                          壅塞
+                        </option>
+                        <option value="004">
+                          交通管制
+                        </option>
+                        <option value="005">
+                          振興券
+                        </option>
+                        <option value="006">
+                          民政服務
+                        </option>
+                      </select>
+                    </div>  
+                </div> -->
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>推播裝置</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-demo" id="radio-demo-1" value="兩者皆是" checked/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">兩者皆是</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-demo" id="radio-demo-2" value="Android" />
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">Android</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-demo" id="radio-demo-2" value="IOS" />
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">IOS</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>                
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送時間類型</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-time" id="radio-time-1" value="即時" onclick="sendTimes()" checked/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">即時發送</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="radio-time" id="radio-time-2" value="自訂" onclick="sendTimes()"/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">自訂時間發送</label>
+                        </div>
+                        <!-- <div class="tpi-radio__item">
+                          <input type="radio" name="radio-time" id="radio-time-3" value="定時" onclick="sendTimes()"/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">定時(下午4點)發送</label>
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row pushTime">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送時間</label>
+                  <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                    <div class="tpi-input__inner">
+                      <input
+                        type="text"
+                        class="tpi-input__other-input"
+                        name="pushDate"
+                        id="pushDate"
+                        value="2019/10/01 11:10"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="tpi-form__row pushDate">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送日期
+                    <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="需大於系統時間"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                  </label>
+                  <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                    <div class="tpi-input__inner">
+                      <input
+                        type="text"
+                        class="tpi-input__other-input"
+                        name="pushDate"
+                        id="pushDate"
+                        value="2019/10/01"
+                        readonly
+                      />
+                    </div>
+                  </div>
+                </div> -->
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>靜音模式</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="modeFalse" id="radio-mute1" onclick="return false" value="modeFalse"/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">靜音</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="modeFalse" id="radio-mute2" onclick="return false" value="modeTrue"/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">非靜音</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送內容類型</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="msgConType" id="radio-demo-1" value="01" onclick="sendConTypes()" checked/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">自訂</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="msgConType" id="radio-demo-2" value="02" onclick="sendConTypes()"/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">參數範本</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row msgConTypeCode">
+                  <label class="tpi-form__label">參數範本
+                      <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="系統將範本內容自動帶入推播文字輸入框內"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                  </label>
+                  <div class="tpi-form__col">
+                    <button class="tpi-button tpi-button--temptext" onclick="displayModal('show');">範本查詢</button>
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                    <label class="tpi-form__label"><span class="tpi-text-blue">*</span>發送主旨
+                      <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="限20字(包含標點符號)"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                    </label>
+                    <div class="tpi-form__col">
+                      <div class="tpi-input">
+                        <div class="tpi-input__inner">
+                          <input
+                            type="text"
+                            class="tpi-input__other-input"
+                            name="title"
+                            id="title"
+                            placeholder="請填入發送主旨"
+                            autocomplete="off"
+                            value="疫情緊急通知專區"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                 <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>推播文字
+                    <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="限50字(包含標點符號)"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                  </label>
+                    <div class="tpi-form__col">
+                      <div class="tpi-input">
+                        <div class="tpi-input__inner">
+                        <textarea
+                          type="text"
+                          class="tpi-input__other-textarea"
+                          name="pushText"
+                          id="pushText"
+                          placeholder=""
+                          rows="5"
+                          cols="100"
+                        >因應疫情影響，為減少人員接觸，進出辦公室請配合測量體溫，謝謝。</textarea>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <div class="tpi-form__row textContent">
+                  <label class="tpi-form__label">推播詳細內容</label>
+                    <div class="tpi-form__col">
+                      <div class="tpi-input">
+                        <div class="tpi-input__inner">
+                        <textarea
+                          type="text"
+                          class="tpi-input__other-textarea"
+                          name="editor1"
+                          id="editor1"
+                          placeholder=""
+                          rows="5"
+                          cols="100"
+                        ></textarea>
+                          <script>
+                            CKEDITOR.replace('editor1');
+                          </script>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <div class="tpi-form__row externalURL">
+                  <label class="tpi-form__label">訊息超連結
+                      <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="需輸入完整 http或 https網址"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                  </label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-input">
+                      <div class="tpi-input__inner">
+                        <input
+                          type="text"
+                          class="tpi-input__other-input"
+                          name="externalUrl"
+                          id="externalUrl"
+                          placeholder="請填入訊息超連結"
+                          autocomplete="off"
+                          value="https://affairs.kh.edu.tw/4732"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row imgURL">
+                  <label class="tpi-form__label">圖片超連結
+                      <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="需輸入完整 http或 https網址"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                  </label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-input">
+                      <div class="tpi-input__inner">
+                        <input
+                          type="text"
+                          class="tpi-input__other-input"
+                          name="imageUrl"
+                          id="imageUrl"
+                          placeholder="請填入圖片超連結"
+                          autocomplete="off"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row">
+                  <label class="tpi-form__label"><span class="tpi-text-blue">*</span>高優先發送</label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-radio">
+                      <div class="tpi-radio__inner">
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="reasonSend" id="reason-1" value="否" onclick="reasonTip()" checked/>
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-1">否</label>
+                        </div>
+                        <div class="tpi-radio__item">
+                          <input type="radio" name="reasonSend" id="reason-2" onclick="reasonTip()" value="是" />
+                          <div class="tpi-radio__mark"></div>
+                          <label for="apiUseStatus-2">是</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__row reason">
+                  <label class="tpi-form__label">高優先發送理由
+                      <div
+                      class="tpi-info-tooltip"
+                      data-toggle="tooltip"
+                      data-placement="top"
+                      title="設定為高優先發送資料，不進行分批處理與確認預計發送時間，一律立即進行推播發送作業。"
+                    >
+                      <span class="icon-info"></span>
+                    </div>
+                  </label>
+                  <div class="tpi-form__col">
+                    <div class="tpi-input">
+                      <div class="tpi-input__inner">
+                        <input
+                          type="text"
+                          class="tpi-input__other-input"
+                          name="title"
+                          id="title"
+                          placeholder="請填入高優先發送理由"
+                          autocomplete="off"
+                          value=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tpi-form__action-container">
+                  <button 
+                    class="tpi-button tpi-button--secondary" 
+                    onclick="location.href='marketingMaintain.html'">
+                    離開
+                  </button>
+                  <button class="tpi-button tpi-button--primary" 
+                  onclick="location.href='marketingMaintain.html'">送出</button>
+                  <button 
+                    class="tpi-button tpi-button--primary" 
+                    onclick="location.href='marketingMaintain.html'">
+                    刪除
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tempQuery"></div>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"/><meta name="msapplication-TileColor" content="#da532c"/><meta name="theme-color" content="#ffffff"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/><link rel="manifest" href="/site.webmanifest"/><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"/><title>推播管理平台-昕力資訊</title><link href="css/main.css" rel="stylesheet"></head><body><div class="jumbotron jumbotron-fluid"><div class="container"><h1>組件、頁面總覽</h1><p class="lead">列出所有頁面的連結，並且展示目前存在的組件與不同狀態下的外觀，方便理解各組件的樣式使用方式。</p></div></div><div class="container development-container"><div class="row"><div class="col-12"><h4>Pages</h4><hr/><div class="row"><div class="col-3"><a href="login.html">登入頁</a></div><div class="col-3"><a href="todoView.html">1.推播待辦事項</a></div><div class="col-3"><a href="tempSettingQuery.html">2.範本管理</a></div><div class="col-3"><a href="urgentMaintain.html">3.緊急事件推播</a></div><div class="col-3"><a href="marketingMaintain.html">4.行銷推廣推播</a></div><div class="col-3"><a href="specialMaintain.html">5.資訊中心推播</a></div><div class="col-3"><a href="personalizeQuery.html">6.個人化推播</a></div><div class="col-3"><a href="pushSendRecord.html">7.推播統計</a></div><div class="col-3"><a href="apiSendRecord.html">8.API推播查詢</a></div><div class="col-3"><a href="trackUserLog.html">9.使用者軌跡查詢</a></div></div></div></div><div class="row mt-5"><div class="col-12"><h4>Components</h4><hr/><div class="toggl-button" data-toggle="collapse" href="#component-button-container"><span>Button</span></div><div id="component-button-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Bottons (Primary)</h5></div></div><div class="col-12"><div class="component-info__container"><button class="tpi-button tpi-button--primary">Sample Button</button></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;button class="tpi-button tpi-button--primary"&gt;Sample Button&lt;/button&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Bottons (Secondary)</h5></div></div><div class="col-12"><div class="component-info__container"><button class="tpi-button tpi-button--secondary">Sample Button</button></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;button class="tpi-button tpi-button--secondary"&gt;Sample Button&lt;/button&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Bottons (Disable)</h5></div></div><div class="col-12"><div class="component-info__container"><button class="tpi-button" disabled="disabled">Sample Button</button></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;button class="tpi-button" disabled&gt;Sample Button&lt;/button&gt;
+&lt;button class="tpi-button tpi-button--primary" disabled&gt;Sample Button&lt;/button&gt;
+&lt;button class="tpi-button tpi-button--secondary" disabled&gt;Sample Button&lt;/button&gt;</code></pre></div></div></div><div class="row align-items-center component-info component-info--dark"><div class="col-12"><div class="component-info__header"><h5>Bottons (Logout)</h5></div></div><div class="col-12"><div class="component-info__container"><button class="tpi-button tpi-button--small">登出</button></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;button class="tpi-button tpi-button--small" disabled&gt;登出&lt;/button&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-input-container"><span>Input</span></div><div id="component-input-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input - index</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input"><div class="tpi-input__inner"><input class="tpi-input__input" name="input-demo-1" id="input-demo-1" placeholder="Please input..." autocomplete="off"/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__input" name="input-demo-1" id="input-demo-1" placeholder="Please input..." autocomplete="off" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input (Correct) - index</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--correct"><div class="tpi-input__inner"><input class="tpi-input__input" name="input-demo-2" id="input-demo-2" placeholder="Please input..."/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--correct"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__input" name="input-demo-2" id="input-demo-2" placeholder="Please input..." /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input (Error) - index</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--error"><div class="tpi-input__inner"><input class="tpi-input__input" name="input-demo-3" id="input-demo-3" placeholder="Please input..."/></div><div class="tpi-input__validate-msg">錯誤訊息</div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--error"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__input" name="input-demo-3" id="input-demo-3" placeholder="Please input..." /&gt;
+  &lt;/div&gt;
+  &lt;div class="tpi-input__validate-msg"&gt;錯誤訊息&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input (Disable) - index</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--disabled"><div class="tpi-input__inner"><input class="tpi-input__input" name="input-demo-4" id="input-demo-4" placeholder="Please input..." disabled="disabled"/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--disabled"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__input" name="input-demo-4" id="input-demo-4" placeholder="Please input..." disabled /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input"><div class="tpi-input__inner"><input class="tpi-input__other-input" name="input-demo-5" id="input-demo-5" placeholder="Placeholder"/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__other-input" name="input-demo-5" id="input-demo-5" placeholder="Placeholder" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input (Correct) - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--correct"><div class="tpi-input__inner"><input class="tpi-input__other-input" name="input-demo-6" id="input-demo-6" placeholder="Placeholder"/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--correct"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__other-input" name="input-demo-6" id="input-demo-6" placeholder="Placeholder" /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input (Error) - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--error"><div class="tpi-input__inner"><input class="tpi-input__other-input" name="input-demo-7" id="input-demo-7" placeholder="Placeholder"/></div><div class="tpi-input__validate-msg">錯誤訊息</div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--error"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__other-input" name="input-demo-7" id="input-demo-7" placeholder="Placeholder" /&gt;
+  &lt;/div&gt;
+  &lt;div class="tpi-input__validate-msg"&gt;錯誤訊息&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Input (Disable) - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--disabled"><div class="tpi-input__inner"><input class="tpi-input__other-input" name="input-demo-8" id="input-demo-8" placeholder="Placeholder" disabled="disabled"/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--disabled"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__other-input" name="input-demo-8" id="input-demo-8" placeholder="Placeholder" disabled /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Textarea - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input"><div class="tpi-input__inner"><textarea type="text" class="tpi-input__other-textarea" name="input-demo-9" id="input-demo-9" placeholder="Placeholder" rows="5" cols="100"></textarea></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;textarea type="text" class="tpi-input__other-textarea" name="input-demo-9" id="input-demo-9" placeholder="Placeholder" rows="5" cols="100" /&gt;&lt;/textarea&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-select-container"><span>Select</span></div><div id="component-select-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Select Bar - index</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-selectric"><select name="select-demo-1" id="select-demo-1"><option value="reg1.uat1bank.dbs.com">reg1.uat1bank.dbs.com</option><option value="reg2.uat1bank.dbs.com">reg2.uat1bank.dbs.com</option><option value="reg3.uat1bank.dbs.com">reg3.uat1bank.dbs.com</option><option value="reg4.uat1bank.dbs.com">reg4.uat1bank.dbs.com</option><option value="reg5.uat1bank.dbs.com">reg5.uat1bank.dbs.com</option><option value="reg6.uat1bank.dbs.com">reg6.uat1bank.dbs.com</option><option value="reg7.uat1bank.dbs.com">reg7.uat1bank.dbs.com</option></select></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-selectric"&gt;
+  &lt;select name="select-demo-1" id="select-demo-1"&gt;
+    &lt;option value="reg1.uat1bank.dbs.com"&gt;
+      reg1.uat1bank.dbs.com
+    &lt;/option&gt;
+    &lt;option value="reg2.uat1bank.dbs.com"&gt;
+      reg2.uat1bank.dbs.com
+    &lt;/option&gt;
+    &lt;option value="reg3.uat1bank.dbs.com"&gt;
+      reg3.uat1bank.dbs.com
+    &lt;/option&gt;
+    &lt;option value="reg4.uat1bank.dbs.com"&gt;
+      reg4.uat1bank.dbs.com
+    &lt;/option&gt;
+    &lt;option value="reg5.uat1bank.dbs.com"&gt;
+      reg5.uat1bank.dbs.com
+    &lt;/option&gt;
+    &lt;option value="reg6.uat1bank.dbs.com"&gt;
+      reg6.uat1bank.dbs.com
+    &lt;/option&gt;
+    &lt;option value="reg7.uat1bank.dbs.com"&gt;
+      reg7.uat1bank.dbs.com
+    &lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#select-demo-1').selectric({
+      arrowButtonMarkup: '&lt;span class="arrow"&gt;&lt;/span&gt;',
+      maxHeight: 250
+    });
+  });
+&lt;/scirpt&gt;</code></pre></div></div></div><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Select Bar - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-selectric tpi-selectric--other"><select name="select-demo-2" id="select-demo-2"><option value="PUSH0001:addUser">PUSH0001:addUser</option><option value="PUSH0002:addUser">PUSH0002:addUser</option><option value="PUSH0003:addUser">PUSH0003:addUser</option><option value="PUSH0004:addUser">PUSH0004:addUser</option><option value="PUSH0005:addUser">PUSH0005:addUser</option></select></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-selectric tpi-selectric--other"&gt;
+  &lt;select name="select-demo-2" id="select-demo-2"&gt;
+    &lt;option value="PUSH0001:addUser"&gt;
+      PUSH0001:addUser
+    &lt;/option&gt;
+    &lt;option value="PUSH0002:addUser"&gt;
+      PUSH0002:addUser
+    &lt;/option&gt;
+    &lt;option value="PUSH0003:addUser"&gt;
+      PUSH00031:addUser
+    &lt;/option&gt;
+    &lt;option value="PUSH0004:addUser"&gt;
+      PUSH0004:addUser
+    &lt;/option&gt;
+    &lt;option value="PUSH0005:addUser"&gt;
+      PUSH0005:addUser
+    &lt;/option&gt;
+  &lt;/select&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#select-demo-2').selectric({
+      arrowButtonMarkup: '&lt;span class="arrow"&gt;&lt;/span&gt;',
+      maxHeight: 250
+    });
+  });
+&lt;/scirpt&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-datepicker-container"><span>Datepicker</span></div><div id="component-datepicker-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Datepicker - other</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-input tpi-input--calendar"><div class="tpi-input__inner"><input class="tpi-input__other-input" name="datepicker-demo-1" id="datepicker-demo-1" value="2019/10/01" readonly="readonly"/></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-input tpi-input--calendar"&gt;
+  &lt;div class="tpi-input__inner"&gt;
+    &lt;input type="text" class="tpi-input__other-input" name="datepicker-demo-1" id="datepicker-demo-1" value="2019/10/01" readonly /&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+  $(function () {
+    $('#datepicker-demo-1').datepicker({
+      language: 'zh-TW',
+      format: 'yyyy/mm/dd',
+      clearBtn: true,
+      orientation: 'bottom auto',
+      autoclose: true
+    });
+  });
+&lt;/scirpt&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-radio-container"><span>Radio Button</span></div><div id="component-radio-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Radio Button</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-radio"><div class="tpi-radio__inner"><div class="tpi-radio__item"><input type="radio" name="radio-demo" id="radio-demo-1" value="停用"/><div class="tpi-radio__mark"></div><label for="apiUseStatus-1">停用</label></div><div class="tpi-radio__item"><input type="radio" name="radio-demo" id="radio-demo-2" value="啟用"/><div class="tpi-radio__mark"></div><label for="apiUseStatus-2">啟用</label></div></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-radio"&gt;
+  &lt;div class="tpi-radio__inner"&gt;
+    &lt;div class="tpi-radio__item"&gt;
+      &lt;input type="radio" name="radio-demo" id="radio-demo-1" value="停用" /&gt;
+      &lt;div class="tpi-radio__mark"&gt;&lt;/div&gt;
+      &lt;label for="apiUseStatus-1"&gt;停用&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="tpi-radio__item"&gt;
+      &lt;input type="radio" name="radio-demo" id="radio-demo-2" value="啟用" /&gt;
+      &lt;div class="tpi-radio__mark"&gt;&lt;/div&gt;
+      &lt;label for="apiUseStatus-2"&gt;啟用&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-menu-container"><span>Menu</span></div><div id="component-menu-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Menu</h5></div></div><div class="col-12"><div class="component-info__container"><div class="menu"><div class="menu__logo"></div><div class="menu__group"><a class="menu__item" href="#" target="_self"><span class="menu-icon-home"></span> <span>首頁</span></a></div><div class="menu__group"><a class="menu__item" href="#" target="_self"><span class="menu-icon-report"></span> <span>範本管理</span></a><div class="menu__sub-container"><div class="menu__sub-item"><a href="#">資料維護</a></div><div class="menu__sub-item menu__sub-item--active"><a href="#">資料維護</a></div><div class="menu__sub-item"><a href="#">資料審核</a></div></div></div><div class="menu__group"><a class="menu__item" href="#" target="_self"><span class="menu-icon-authority"></span> <span>緊急推播</span></a><div class="menu__sub-container"><div class="menu__sub-item"><a href="#">名單建立</a></div><div class="menu__sub-item"><a href="#">推播資料維護</a></div><div class="menu__sub-item menu__sub-item--active"><a href="#">推播資料查詢</a></div></div></div><div class="menu__group"><a class="menu__item" href="#" target="_self"><span class="menu-icon-sell"></span> <span>行銷推播</span></a><div class="menu__sub-container"><div class="menu__sub-item"><a href="#">名單建立</a></div><div class="menu__sub-item"><a href="#">推播資料維護</a></div><div class="menu__sub-item menu__sub-item--active"><a href="#">推播資料查詢</a></div></div></div><div class="menu__group"><a class="menu__item" href="#" target="_self"><span class="menu-icon-number"></span> <span>特例推播</span></a><div class="menu__sub-container"><div class="menu__sub-item"><a href="#">名單建立</a></div><div class="menu__sub-item"><a href="#">推播資料維護</a></div><div class="menu__sub-item menu__sub-item--active"><a href="#">推播資料查詢</a></div></div></div><div class="menu__group"><a class="menu__item" href="#" target="_self"><span class="menu-icon-recording"></span> <span>個人化推播</span></a><div class="menu__sub-container"><div class="menu__sub-item"><a href="#">名單建立</a></div><div class="menu__sub-item"><a href="#">推播資料維護</a></div><div class="menu__sub-item menu__sub-item--active"><a href="#">推播資料查詢</a></div></div></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="menu"&gt;
+  &lt;div class="menu__logo"&gt;&lt;/div&gt;
+  &lt;div class="menu__group"&gt;
+    &lt;a class="menu__item" href="#" target="_self"&gt;
+    &lt;span class="menu-icon-home"&gt;&lt;/span&gt;
+    &lt;span&gt;首頁&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="menu__group"&gt;
+    &lt;a
+      class="menu__item"
+      href="#"
+      target="_self"
+    &gt;
+      &lt;span class="menu-icon-report"&gt;&lt;/span&gt;
+      &lt;span&gt;範本管理&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class="menu__sub-container"&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;資料維護&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item menu__sub-item--active"&gt;&lt;a href="#"&gt;資料查詢&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;資料審核&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menu__group"&gt;
+    &lt;a
+      class="menu__item"
+      href="#"
+      target="_self"
+    &gt;
+      &lt;span class="menu-icon-authority"&gt;&lt;/span&gt;
+      &lt;span&gt;緊急推播&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class="menu__sub-container"&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;名單建立&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;推播資料維護&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item menu__sub-item--active"&gt;&lt;a href="#"&gt;推播資料查詢&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menu__group"&gt;
+    &lt;a
+      class="menu__item"
+      href="#"
+      target="_self"
+    &gt;
+      &lt;span class="menu-icon-sell"&gt;&lt;/span&gt;
+      &lt;span&gt;行銷推播&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class="menu__sub-container"&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;名單建立&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;推播資料維護&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item menu__sub-item--active"&gt;&lt;a href="#"&gt;推播資料查詢&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menu__group"&gt;
+    &lt;a
+      class="menu__item"
+      href="#"
+      target="_self"
+    &gt;
+      &lt;span class="menu-icon-number"&gt;&lt;/span&gt;
+      &lt;span&gt;特例推播&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class="menu__sub-container"&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;名單建立&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;推播資料維護&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item menu__sub-item--active"&gt;&lt;a href="#"&gt;推播資料查詢&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="menu__group"&gt;
+    &lt;a
+      class="menu__item"
+      href="#"
+      target="_self"
+    &gt;
+      &lt;span class="menu-icon-recording"&gt;&lt;/span&gt;
+      &lt;span&gt;個人化推播&lt;/span&gt;
+    &lt;/a&gt;
+    &lt;div class="menu__sub-container"&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;名單建立&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item"&gt;&lt;a href="#"&gt;推播資料維護&lt;/a&gt;&lt;/div&gt;
+      &lt;div class="menu__sub-item menu__sub-item--active"&gt;&lt;a href="#"&gt;推播資料查詢&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-bookmark-container"><span>Bookmark</span></div><div id="component-bookmark-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Bookmark</h5></div></div><div class="col-12"><div class="component-info__container"><div class="nav-bar"><a class="nav-bar__item nav-bar__item--active" href="#">待處理案件</a> <a class="nav-bar__item" href="#">歷史案件</a></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="nav-bar"&gt;
+  &lt;a class="nav-bar__item nav-bar__item--active" href="#"&gt;待處理案件&lt;/a&gt;
+  &lt;a class="nav-bar__item" href="#"&gt;歷史案件&lt;/a&gt;
+&lt;/div&gt;</code></pre></div></div></div></div><div class="toggl-button" data-toggle="collapse" href="#component-pagination-container"><span>Pagination</span></div><div id="component-pagination-container" class="collapse mb-4"><div class="row align-items-center component-info"><div class="col-12"><div class="component-info__header"><h5>Pagination</h5></div></div><div class="col-12"><div class="component-info__container"><div class="tpi-pagination"><div class="tpi-pagination__previous"></div><div class="tpi-pagination__page-button tpi-pagination__page-button--active">1</div><div class="tpi-pagination__page-button">2</div><div class="tpi-pagination__page-button">3</div><div class="tpi-pagination__page-button">4</div><div class="tpi-pagination__page-button tpi-pagination__page-button--disabled">5</div><div class="tpi-pagination__next"></div></div></div></div><div class="col-12"><div class="component-info__code"><pre><code>&lt;div class="tpi-pagination"&gt;
+  &lt;div class="tpi-pagination__previous"&gt;&lt;/div&gt;
+  &lt;div class="tpi-pagination__page-button tpi-pagination__page-button--active"&gt;1&lt;/div&gt;
+  &lt;div class="tpi-pagination__page-button"&gt;2&lt;/div&gt;
+  &lt;div class="tpi-pagination__page-button"&gt;3&lt;/div&gt;
+  &lt;div class="tpi-pagination__page-button"&gt;4&lt;/div&gt;
+  &lt;div class="tpi-pagination__page-button tpi-pagination__page-button--disabled"&gt;5&lt;/div&gt;
+  &lt;div class="tpi-pagination__next"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></div></div></div></div><div class="row mt-5"><div class="col-12"><h4>Packages</h4><hr/><ul><li><a href="https://jquery.com/" target="_blank">jQuery(版本：3.5.1)</a></li><li><a href="https://getbootstrap.com/" target="_blank">Bootstrap(版本：4.5.0)</a></li><li><a href="https://selectric.js.org/" target="_blank">jQuery Selectric(版本：1.13.0)</a></li><li><a href="https://bootstrap-datepicker.readthedocs.io/en/latest/" target="_blank">Boosttrap Datepicker(版本：1.9.0)</a></li></ul></div></div></div><script src="js/main.js"></script></body></html>

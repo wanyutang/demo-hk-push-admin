@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>行銷推播歷史資料查詢 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+    <script src="./js/bootstrap-datepicker/bootstrap-datepicker.zh-TW.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/history.js"></script>
+    <script src="./js/menu.js"></script>
+  </head>
+  <body>
+    <div class="page-container">
+      <div class="page-container__menu">
+        <div class="menu"></div>
+        <div class="page-container__version">
+          varsion：3.2.4
+        </div>
+      </div>
+      <div class="page-container__main">
+        <div class="page-container__header">
+          <div class="page-container__title">推播管理平台</div>
+          <div class="page-container__info">
+            <span>目前使用者：吳傑森(jason)</span>
+            <button class="tpi-button tpi-button--small">登出</button>
+          </div>
+        </div>
+        <div class="page-container__content">
+          <div class="page-title">推播資料歷史查詢
+            <div class="breadcrumbs clearfix">
+              <label class="breadcrumbs__item">行銷推播</label>
+              <label class="breadcrumbs__item">推播資料歷史查詢</label>
+            </div>
+          </div>
+          <div class="tpi-card">
+            <div class="tpi-card__header">
+              <div
+                class="collapse-trigger"
+                data-toggle="collapse"
+                href="#collapseTarget"
+              >
+              篩選條件
+              </div>
+            </div>
+            <div class="collapse show" id="collapseTarget">
+              <div class="tpi-card__content tpi-card__content--with-divider">
+                <form action="#" novalidate class="tpi-form">
+                  <div class="row">
+                    <div class="col-md-12 col-lg-3">
+                      <div class="tpi-form__inline-group">
+                        <label for="app">推播狀態</label>
+                        <div class="tpi-selectric--other tpi-form__inline-control">
+                          <select name="status" id="status">
+                            <option value="0">
+                              請選擇
+                            </option>
+                            <option value="已完成">
+                              已完成
+                            </option>
+                            <option value="已終止">
+                              已終止
+                            </option>
+                            <option value="已回收">
+                              已回收
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                      <div class="tpi-form__inline-group">
+                        <label>預計發送時間</label>
+                        <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                          <div class="tpi-input__inner">
+                            <input
+                              type="text"
+                              class="tpi-input__other-input"
+                              name="startDate"
+                              id="startDate"
+                              value="2019/10/01"
+                              readonly
+                            />
+                          </div>
+                        </div>
+                        <label>~</label>
+                        <div class="tpi-input tpi-input--calendar tpi-form__inline-control">
+                          <div class="tpi-input__inner">
+                            <input
+                              type="text"
+                              class="tpi-input__other-input"
+                              name="endDate"
+                              id="endDate"
+                              value="2019/11/01"
+                              readonly
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tpi-form__action-container">
+                    <button class="tpi-button tpi-button--primary">查詢</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="tpi-table tpi-table--with-margin">
+            <div class="tpi-table__inner">
+              <span class="px-1 tpi-text-violet">回收：於使用者訊息收件匣回收此筆推播訊息</span>
+              <table class="tpi-table__table">
+                <thead>
+                  <tr>
+                   <th class="text-left">發送主旨</th>
+                   <th class="text-left">靜音模式</th>
+                   <th class="text-left">更新人員</th>
+                   <th class="text-left">審核人員</th>
+                   <th class="text-left">審核時間</th>
+                   <th class="text-left">預計發送時間</th>
+                   <th class="text-left">推播狀態</th>
+                   <th>終止/回收時間</th>
+                   <th>操作</th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="text-left">疫情緊急通知專區</td>
+                    <td class="text-left">靜音</td>
+                    <td class="text-left">王曉歡(vivian)</td>
+                    <td class="text-left">陳昂文(kevin)</td>
+                    <td class="text-left">2020/10/10 18:10:01</td>
+                    <td class="text-left">2020/10/10 19:10:00</td>
+                    <td class="text-left">
+                      <div class="push-status push-status--success">已完成</div>
+                      <div>總筆數<span class="px-1 tpi-text-blue">25</span>筆</div>
+                      <div>成功<span class="px-1 tpi-text-blue">10</span>筆</div>
+                      <div><span class="tpi-mark-label">失敗<span class="px-1 tpi-text-orange">5</span>筆</span></div>
+                      <div><span class="tpi-mark-label">不符合筆數<span class="px-1 tpi-text-orange">10</span>筆</span></div>
+                    </td>
+                    <td></td>
+                    <td>
+                      <button class="tpi-button tpi-button--recycle">
+                        回收
+                      </button>
+                      <button class="tpi-button tpi-button--secondary" 
+                      onclick="location.href='marketingHSView.html'">檢視</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">部分功能停止更新</td>
+                    <td class="text-left">靜音</td>
+                    <td class="text-left">楊希斯(Tanjiro)</td>
+                    <td class="text-left">曹白元(bacon)</td>
+                    <td class="text-left">2020/10/10 18:10:01</td>
+                    <td class="text-left">2020/10/10 19:10:00</td>
+                    <td class="text-left">
+                      <div class="push-status push-status--other">楊希斯(Tanjiro)已終止</div>
+                    </td>
+                    <td>2019/10/10 19:30:00</td>
+                    <td>
+                      <button class="tpi-button tpi-button--secondary" 
+                      onclick="location.href='marketingHSView.html'">檢視</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="text-left">部分功能停止更新</td>
+                    <td class="text-left">靜音</td>
+                    <td class="text-left">楊希斯(Tanjiro)</td>
+                    <td class="text-left">曹白元(bacon)</td>
+                    <td class="text-left">2020/10/10 18:30:00</td>
+                    <td class="text-left">2020/10/10 19:30:00</td>
+                    <td class="text-left">
+                      <div class="push-status push-status--other">楊希斯(Tanjiro)已回收</div>
+                    </td>
+                    <td>2019/10/10 19:50:00</td>
+                    <td>
+                      <button class="tpi-button tpi-button--secondary" 
+                      onclick="location.href='marketingHSView.html'">檢視</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tpi-table__pagination tpi-pagination">
+              <div class="tpi-pagination__previous"></div>
+              <div
+                class="tpi-pagination__page-button tpi-pagination__page-button--active"
+              >
+                1
+              </div>
+              <div class="tpi-pagination__page-button">2</div>
+              <div class="tpi-pagination__page-button">3</div>
+              <div class="tpi-pagination__page-button">4</div>
+              <div class="tpi-pagination__page-button">5</div>
+              <div class="tpi-pagination__next"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

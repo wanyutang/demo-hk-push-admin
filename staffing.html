@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <title>人員設定 推播管理平台-昕力資訊</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/jquery/jquery.js"></script>
+    <script src="./js/bootstrap/bootstrap.js"></script>
+    <script src="./js/selectric/jquery.selectric.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        $(function(){
+            $('div[class^=tpi-selectric]').find('select').selectric({
+                arrowButtonMarkup: '<span class="arrow"></span>',
+                maxHeight: 250
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="page-container__menu">
+            <div class="menu"></div>
+            <div class="page-container__version">
+                varsion：3.2.4
+            </div>
+        </div>
+        <div class="page-container__main">
+            <div class="page-container__header">
+                <div class="page-container__title">推播管理平台</div>
+                <div class="page-container__info">
+                    <span>目前使用者：吳傑森(jason)</span>
+                    <button class="tpi-button tpi-button--small">登出</button>
+                </div>
+            </div>
+            <div class="page-container__content">
+                <div class="page-title">人員設定
+                    <div class="breadcrumbs clearfix">
+                        <label class="breadcrumbs__item">權限管理</label>
+                        <label class="breadcrumbs__item">人員設定</label>
+                    </div>
+                </div>
+                <div class="tpi-card">
+                    <div class="tpi-card__header">
+                        <div class="collapse-trigger" data-toggle="collapse" href="#collapseTarget">
+                            篩選條件
+                        </div>
+                    </div>
+                    <div class="collapse show" id="collapseTarget">
+                        <div class="tpi-card__content tpi-card__content--with-divider">
+                            <form action="#" novalidate class="tpi-form">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3">
+                                        <div class="tpi-form__inline-group">
+                                            <label for="app">選擇群組</label>
+                                            <div class="tpi-selectric--other tpi-form__inline-control">
+                                                <select name="status" id="status">
+                                                    <option>全部選擇</option>
+                                                    <option value="客服主管">客服主管</option>
+                                                    <option value="客服專員">客服專員</option>
+                                                    <option value="系統審核主管">系統審核主管</option>
+                                                    <option value="系統管理員">系統管理員</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-lg-3">
+                                        <div class="tpi-form__inline-group">
+                                            <label>使用者 ID</label>
+                                            <div class="tpi-input">
+                                                <div class="tpi-input__inner">
+                                                    <input type="text" class="tpi-input__other-input" name="title"
+                                                        id="title" placeholder="請輸入" autocomplete="off" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-6">
+                                        <div class="tpi-form__inline-group">
+                                            <label>狀態 </label>
+                                            <div class="tpi-form__col-long">
+                                                <div class="tpi-radio">
+                                                    <div class="tpi-radio__inner">
+                                                      <div class="tpi-radio__item">
+                                                        <input type="radio" name="status" id="status-1" value="Active" checked/>
+                                                        <div class="tpi-radio__mark"></div>
+                                                        <label for="status-1">正常</label>
+                                                      </div>
+                                                      <div class="tpi-radio__item">
+                                                        <input type="radio" name="status" id="status-2" value="Locked" />
+                                                        <div class="tpi-radio__mark"></div>
+                                                        <label for="status-2">鎖定</label>
+                                                      </div>
+                                                      <div class="tpi-radio__item">
+                                                        <input type="radio" name="status" id="status-3" value="Resignation" />
+                                                        <div class="tpi-radio__mark"></div>
+                                                        <label for="status-3">停權</label>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tpi-form__action-container">
+                                    <button class="tpi-button tpi-button--primary">查詢</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-button">
+                    <div class="text-right">
+                        <button class="tpi-button tpi-button--primary" onclick="location.href='staffingAdd.html'">
+                            新增
+                    </div>
+                </div>
+                <div class="tpi-table tpi-table--with-margin">
+                    <div class="tpi-table__inner">
+                        <table class="tpi-table__table">
+                            <thead>
+                                <tr>
+                                    <th style="width:9%">使用者 ID</th>
+                                    <th style="width:12%">使用者群組</th>
+                                    <th style="width:8%">狀態</th>
+                                    <th style="width:22%">上次登入時間</th>
+                                    <th style="width:22%">更新時間</th>
+                                    <th style="width:22%">建立時間</th>
+                                    <th style="width:5%">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1234567</td>
+                                    <td>客服主管</td>
+                                    <td>正常</td>
+                                    <td>2017/09/30 14:00:00</td>
+                                    <td>2017/09/28 14:00:00</td>
+                                    <td>2017/09/28 14:00:00</td>
+                                    <td>
+                                      <a href="staffingEdit.html" class="tpi-button tpi-button--modify" type="button">編輯</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>1334256</td>
+                                    <td>系統管理者</td>
+                                    <td>停權</td>
+                                    <td>2017/09/30 14:00:00</td>
+                                    <td>2017/09/28 14:00:00</td>
+                                    <td>2017/09/28 14:00:00</td>
+                                    <td>
+                                      <a href="staffingEdit.html" class="tpi-button tpi-button--modify" type="button">編輯</a>
+                                    </td>
+                                  </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tpi-table__pagination tpi-pagination">
+                        <div class="tpi-pagination__previous"></div>
+                        <div class="tpi-pagination__page-button tpi-pagination__page-button--active">
+                            1
+                        </div>
+                        <div class="tpi-pagination__page-button">2</div>
+                        <div class="tpi-pagination__page-button">3</div>
+                        <div class="tpi-pagination__page-button">4</div>
+                        <div class="tpi-pagination__page-button">5</div>
+                        <div class="tpi-pagination__next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
